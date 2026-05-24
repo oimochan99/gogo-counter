@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOGOカウンター – ジャグラー設定推測アプリ</title>
+  <meta name="description" content="GOGOカウンターはジャグラーシリーズのボーナス・小役をカウントして設定を推測するAndroidアプリです。BIG/REG・ぶどう・チェリーをワンタップで記録。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #08070a;
+      --card:     #0e0e14;
+      --border:   #1e1e28;
+      --gold:     #FFD60A;
+      --text:     #ffffff;
+      --sub:      #9aa0a8;
+      --muted:    #4a4d55;
+      --cyan:     #22d3ee;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── ヒーロー ── */
+    .hero {
+      background: radial-gradient(ellipse at 50% 0%, #1a1614 0%, #08070a 55%, #000 100%);
+      text-align: center;
+      padding: 80px 20px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,214,10,.12);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,214,10,.3);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--sub);
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: #000;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 14px 32px;
+      border-radius: 14px;
+      transition: opacity .15s;
+    }
+
+    .btn-primary:hover { opacity: .85; text-decoration: none; }
+
+    .btn-primary svg { flex-shrink: 0; }
+
+    /* ── スクショ ── */
+    .screenshots {
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .screenshots-inner {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .screenshot-slot {
+      width: 160px;
+      height: 284px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .screenshot-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* ── 機能 ── */
+    .features {
+      padding: 60px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 32px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--gold);
+    }
+
+    .feature-card p {
+      font-size: 12px;
+      color: var(--sub);
+      line-height: 1.7;
+    }
+
+    /* ── 対応機種 ── */
+    .machines {
+      padding: 60px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .machines-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .machine-tag {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sub);
+    }
+
+    /* ── フッター ── */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer a { color: var(--sub); }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ── ユーティリティ ── */
+    .container { max-width: 900px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="hero-badge">Android アプリ</div>
+    <h1>GOGO<span>カウンター</span></h1>
+    <p>ジャグラーの設定推測をもっとシンプルに。<br>ボーナス・小役をワンタップで記録、リアルタイムで設定を分析。</p>
+    <!-- Play Store 公開後にリンクを差し込む -->
+    <a class="btn-primary" href="#" id="playstore-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 20.5v-17c0-.83 1.08-1.26 1.71-.7l14 8.5c.59.36.59 1.24 0 1.6l-14 8.5c-.63.56-1.71.13-1.71-.7z"/>
+      </svg>
+      Google Play でダウンロード
+    </a>
+  </section>
+
+  <!-- スクショ -->
+  <section class="screenshots">
+    <div class="container">
+      <h2 class="section-title">スクリーンショット</h2>
+      <div class="screenshots-inner">
+        <!-- スクショ準備後に <img src="images/ss1.png" alt="カウンター画面"> に差し替え -->
+        <div class="screenshot-slot">カウンター画面</div>
+        <div class="screenshot-slot">設定ゲージ</div>
+        <div class="screenshot-slot">収支記録</div>
+        <div class="screenshot-slot">機種選択</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 機能 -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">主な機能</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎰</div>
+          <h3>ボーナスカウント</h3>
+          <p>BIG・REG をワンタップで記録。チェリー重複・単独・不明を細かく分けて管理できます。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>設定ゲージ表示</h3>
+          <p>合算ボーナス・単独REG・ぶどうの確率を設定1〜6 のゲージでリアルタイム表示。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💴</div>
+          <h3>差枚リアルタイム計算</h3>
+          <p>ぶどう・チェリー・BIG・REGから推定差枚を自動計算。プラスかマイナスか一目でわかります。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>収支記録</h3>
+          <p>稼働ごとのデータを自動保存。カレンダー・月次集計・推移グラフで振り返れます。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔁</div>
+          <h3>セッション復帰</h3>
+          <p>途中終了した台を履歴から復帰。前回のカウントデータをそのまま再開できます。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>完全オフライン</h3>
+          <p>データは端末内にのみ保存。通信不要・広告なし・個人情報の収集もありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応機種 -->
+  <section class="machines">
+    <div class="container">
+      <h2 class="section-title">対応機種（9機種）</h2>
+      <div class="machines-list">
+        <span class="machine-tag">マイジャグラーⅥ</span>
+        <span class="machine-tag">ゴーゴージャグラー3</span>
+        <span class="machine-tag">マイジャグラーV</span>
+        <span class="machine-tag">アイムジャグラーEX</span>
+        <span class="machine-tag">ファンキージャグラー2</span>
+        <span class="machine-tag">ウルトラミラクルジャグラー</span>
+        <span class="machine-tag">ハッピージャグラーVIII</span>
+        <span class="machine-tag">ジャグラーガールズSS</span>
+        <span class="machine-tag">ミスタージャグラー</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="mailto:kuwa.designworks@gmail.com">お問い合わせ</a>
+    </div>
+    <p>&copy; 2026 GOGOカウンター</p>
+  </footer>
+
+</body>
+</html>
