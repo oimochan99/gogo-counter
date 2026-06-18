@@ -176,6 +176,10 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .btn-disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
 
         @keyframes neon-broken-flicker {
             0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 30px rgba(255,74,141,0.8)) drop-shadow(0 0 50px rgba(47,217,244,0.4)); }
@@ -206,9 +210,12 @@
 <span class="font-headline-lg text-headline-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]"><span class="text-neon-pink">GOGO</span><span class="text-[#ffffff]">カウンター</span></span>
 </div>
 <nav class="hidden md:flex justify-center gap-md font-label-md text-lg"><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#features">主な機能</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#gallery">ギャラリー</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#use-cases">利用シーン</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#reviews">ユーザーの声</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#compatibility">対応機種</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#pricing">料金</a><a class="text-on-surface-variant hover:text-primary transition-colors text-lg" href="#faq">FAQ</a></nav>
-<div class="hidden md:flex flex-1 justify-end">
-<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-label-md text-label-md px-md py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all font-bold">
-                Google Playで購入
+<div class="hidden md:flex flex-1 justify-end gap-sm items-center">
+<button class="btn-disabled flex items-center gap-xs bg-surface-container text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded-full border border-white/10 text-sm whitespace-nowrap">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>近日対応
+</button>
+<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-label-md text-label-md px-md py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all font-bold whitespace-nowrap">
+  Google Playで無料DL
 </a>
 </div>
 <button aria-label="Menu" class="md:hidden text-primary p-xs flex-1 flex justify-end">
@@ -232,17 +239,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md text-center">
 <span class="material-symbols-outlined text-neon-pink text-5xl mb-sm">touch_app</span>
-<h3 class="font-headline-md text-headline-md text-neon-pink mb-xs">ホールで実際に使うことを考えた設計</h3>
+<h3 class="font-headline-md text-headline-md text-neon-pink mb-xs">ホールで実際に使うことを<br>考えた設計</h3>
 <p class="text-on-surface-variant">主要ボタンはすべて画面下半分に集中。打ちながら親指1本で全操作を完結。カウントボタンは大きく誤タップしにくい設計で、ゲームに集中できる。</p>
 </div>
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md text-center">
 <span class="material-symbols-outlined text-cyan text-5xl mb-sm">analytics</span>
-<h3 class="font-headline-md text-headline-md text-cyan mb-xs">感覚じゃなく数字で「続行」か「やめ時」を判断</h3>
+<h3 class="font-headline-md text-headline-md text-cyan mb-xs">感覚じゃなく数字で<br>「続行」か「やめ時」を判断</h3>
 <p class="text-on-surface-variant">合算/単独REG/ぶどう確率を設定1〜6とリアルタイム比較。データが積み重なるほど、高設定かどうかの確信度が高まる。</p>
 </div>
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md text-center">
 <span class="material-symbols-outlined text-gold text-5xl mb-sm">wifi_off</span>
-<h3 class="font-headline-md text-headline-md text-gold mb-xs">電波が悪いホールでも安心。データは端末内のみ</h3>
+<h3 class="font-headline-md text-headline-md text-gold mb-xs">電波が悪いホールでも安心。<br>データは端末内のみ</h3>
 <p class="text-on-surface-variant">インターネット接続不要のオフライン完結設計。収支や打ち込みデータは外部サーバーに送信されない。自分のデータは自分だけのもの。</p>
 </div>
 </div>
@@ -277,7 +284,7 @@
 <p class="text-on-surface-variant text-body-lg">ボーナスをまたいだ自己分の差枚をリアルタイム追跡。「今日プラスかマイナスか」を感覚ではなく数字で把握できる。</p>
 </div>
 <div class="flex-1 w-full flex justify-center">
-<img alt="メイン画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_main.jpg"/>
+<img alt="差枚計算画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_saishiku.jpg"/>
 </div>
 </div>
 <!-- Feature 4 -->
@@ -297,7 +304,7 @@
 <p class="text-on-surface-variant text-body-lg">途中退席・中断後でも「この台の続き」を履歴から即再開できる。カウントデータが消えない安心感。</p>
 </div>
 <div class="flex-1 w-full flex justify-center">
-<img alt="セッション開始" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(0,229,255,0.3)] max-h-[500px] object-cover" src="images/ss_session.jpg"/>
+<img alt="機種別集計画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(0,229,255,0.3)] max-h-[500px] object-cover" src="images/ss_shukei.jpg"/>
 </div>
 </div>
 <!-- Feature 6 -->
@@ -307,35 +314,52 @@
 <p class="text-on-surface-variant text-body-lg">収支データをJSON形式でエクスポート・インポート可能。スマホ機種変更後もデータを引き継げる。</p>
 </div>
 <div class="flex-1 w-full flex justify-center">
-<img alt="データ管理" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_settings.jpg"/>
+<img alt="データ管理画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_kanri.jpg"/>
 </div>
 </div>
 </section>
 <!-- Gallery Carousel -->
 <section class="py-xl bg-surface-container-low" id="gallery">
-<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
-<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">ギャラリー</h2>
-<div class="flex overflow-x-auto gap-md pb-md snap-x hide-scrollbar">
-<div class="snap-center shrink-0 w-64 md:w-80">
-<img alt="Main Counter" class="rounded-2xl border border-white/10 w-full" src="images/ss_counter.jpg"/>
-<p class="text-center mt-sm text-on-surface-variant">メインカウンター</p>
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">こんな場面で使える</h2>
+<div class="relative overflow-hidden rounded-3xl">
+  <div id="galleryTrack" class="flex transition-transform duration-500 ease-in-out">
+    <div class="min-w-full relative">
+      <img alt="Scene01" class="w-full h-80 md:h-[480px] object-cover object-top" src="images/lp1.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-md md:p-lg">
+        <p class="text-neon-pink font-label-sm text-label-sm mb-xs">SCENE 01</p>
+        <h3 class="font-headline-md text-headline-md text-primary mb-xs">台についた瞬間からスタート</h3>
+        <p class="text-on-surface-variant text-sm">機種を選んでカウントを開始するだけ。昨日打った台の続きも、履歴からすぐ再開できる。</p>
+      </div>
+    </div>
+    <div class="min-w-full relative">
+      <img alt="Scene02" class="w-full h-80 md:h-[480px] object-cover object-top" src="images/lp2.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-md md:p-lg">
+        <p class="text-cyan font-label-sm text-label-sm mb-xs">SCENE 02</p>
+        <h3 class="font-headline-md text-headline-md text-primary mb-xs">ボーナスが来るたびに1タップ</h3>
+        <p class="text-on-surface-variant text-sm">片手親指で完結。設定ゲージが積み上がるほど、高設定かどうかの確信度が上がっていく。</p>
+      </div>
+    </div>
+    <div class="min-w-full relative">
+      <img alt="Scene03" class="w-full h-80 md:h-[480px] object-cover object-top" src="images/lp3.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-md md:p-lg">
+        <p class="text-gold font-label-sm text-label-sm mb-xs">SCENE 03</p>
+        <h3 class="font-headline-md text-headline-md text-primary mb-xs">設定分析が「やめ時」を教えてくれる</h3>
+        <p class="text-on-surface-variant text-sm">500G超えてデータがキツくなってきた。設定分析を開くと、数字が今の立ち位置を示してくれる。感覚じゃなく、根拠のある撤退判断。</p>
+      </div>
+    </div>
+  </div>
+  <button id="galleryPrev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-neon-pink/40 transition-colors z-10">
+    <span class="material-symbols-outlined text-xl">chevron_left</span>
+  </button>
+  <button id="galleryNext" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-neon-pink/40 transition-colors z-10">
+    <span class="material-symbols-outlined text-xl">chevron_right</span>
+  </button>
 </div>
-<div class="snap-center shrink-0 w-64 md:w-80">
-<img alt="Settings Analysis" class="rounded-2xl border border-white/10 w-full" src="images/ss_analysis.jpg"/>
-<p class="text-center mt-sm text-on-surface-variant">設定分析</p>
-</div>
-<div class="snap-center shrink-0 w-64 md:w-80">
-<img alt="Session Start" class="rounded-2xl border border-white/10 w-full" src="images/ss_session.jpg"/>
-<p class="text-center mt-sm text-on-surface-variant">セッション開始</p>
-</div>
-<div class="snap-center shrink-0 w-64 md:w-80">
-<img alt="Income Calendar" class="rounded-2xl border border-white/10 w-full" src="images/ss_calendar.jpg"/>
-<p class="text-center mt-sm text-on-surface-variant">収支カレンダー</p>
-</div>
-<div class="snap-center shrink-0 w-64 md:w-80">
-<img alt="Income Summary" class="rounded-2xl border border-white/10 w-full" src="images/ss_summary.jpg"/>
-<p class="text-center mt-sm text-on-surface-variant">収支集計</p>
-</div>
+<div class="flex justify-center gap-2 mt-sm" id="galleryDots">
+  <button class="w-2 h-2 rounded-full bg-neon-pink transition-colors gallery-dot" data-i="0"></button>
+  <button class="w-2 h-2 rounded-full bg-white/30 transition-colors gallery-dot" data-i="1"></button>
+  <button class="w-2 h-2 rounded-full bg-white/30 transition-colors gallery-dot" data-i="2"></button>
 </div>
 </div>
 </section>
@@ -369,19 +393,19 @@
 <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">ユーザーの声</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
-<div class="flex text-gold mb-sm"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+<div class="flex text-gold mb-sm" style="font-variation-settings:'FILL' 1"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
 <h4 class="font-headline-md text-sm text-primary mb-xs">片手操作の完成度が段違い</h4>
 <p class="text-on-surface-variant mb-sm text-sm">「ホールで実際に使ってみて、片手でサクサク操作できる設計に驚きました。設定の色分けもわかりやすく、今まで使ってた無料アプリとは完成度が全然違います。980円は最初ちょっと高いかと思ったけど、毎週ホール行くなら余裕で元が取れます。」</p>
 <p class="text-xs text-on-surface-variant/70">30代男性・ジャグラー歴7年</p>
 </div>
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
-<div class="flex text-gold mb-sm"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+<div class="flex text-gold mb-sm" style="font-variation-settings:'FILL' 1"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
 <h4 class="font-headline-md text-sm text-primary mb-xs">単独REGとチェリー重複REGを分けてカウントできるアプリをずっと探してた</h4>
 <p class="text-on-surface-variant mb-sm text-sm">「他のアプリって合算REGしかカウントできないものが多くて設定推測が荒かったです。これは機種ごとのスペックに沿ってリアルタイムで推測してくれるので精度が段違いです。」</p>
 <p class="text-xs text-on-surface-variant/70">20代男性・設定狙い派</p>
 </div>
 <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
-<div class="flex text-gold mb-sm"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+<div class="flex text-gold mb-sm" style="font-variation-settings:'FILL' 1"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
 <h4 class="font-headline-md text-sm text-primary mb-xs">ホール環境で使うことを本当に考えてくれてる</h4>
 <p class="text-on-surface-variant mb-sm text-sm">「ダークモード固定なのがホールで使うには最高。他のアプリは白背景でホールの暗さとのコントラストがきつかったです。回転数が少ないうちは「信頼度低め」と表示してくれる誠実さも好き。」</p>
 <p class="text-xs text-on-surface-variant/70">20代・スマホユーザー</p>
@@ -394,38 +418,58 @@
 <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">対応機種</h2>
 <p class="text-center text-on-surface-variant mb-xl">ジャグラーシリーズ 9機種対応</p>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-sm md:gap-md text-center">
-<div class="bg-gradient-to-b from-gray-700 to-gray-900 border border-yellow-500/50 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] text-white font-bold flex items-center justify-center gap-xs">マイジャグラーⅥ</div>
-<div class="bg-gradient-to-b from-blue-700 to-blue-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">マイジャグラーV</div>
-<div class="bg-gradient-to-b from-red-600 to-red-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">アイムジャグラーEX</div>
-<div class="bg-gradient-to-b from-blue-500 to-indigo-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">ファンキージャグラー2</div>
-<div class="bg-gradient-to-b from-green-500 to-green-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">ハッピージャグラーVIII</div>
-<div class="bg-gradient-to-b from-pink-500 to-pink-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">ゴーゴージャグラー3</div>
-<div class="bg-gradient-to-b from-teal-500 to-teal-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">ジャグラーガールズSS</div>
-<div class="bg-gradient-to-b from-gray-700 to-gray-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] text-white font-bold">ミスタージャグラー</div>
-<div class="bg-gradient-to-b from-purple-600 to-purple-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] text-white font-bold">ウルトラミラクルジャグラー</div>
+<div class="bg-gradient-to-b from-red-500 to-red-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold flex items-center justify-center">マイジャグラーⅥ</div>
+<div class="bg-gradient-to-b from-pink-500 to-pink-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">ゴーゴージャグラー3</div>
+<div class="bg-gradient-to-b from-red-700 to-red-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">マイジャグラーV</div>
+<div class="bg-gradient-to-b from-indigo-500 to-indigo-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">アイムジャグラーEX</div>
+<div class="bg-gradient-to-b from-blue-700 to-blue-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">ファンキージャグラー2</div>
+<div class="bg-gradient-to-b from-purple-600 to-purple-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">ウルトラミラクルジャグラー</div>
+<div class="bg-gradient-to-b from-green-600 to-green-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">ハッピージャグラーVIII</div>
+<div class="bg-gradient-to-b from-green-500 to-green-800 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold">ジャグラーガールズSS</div>
+<div class="bg-gradient-to-b from-stone-600 to-stone-900 border border-yellow-500/50 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] text-white font-bold">ミスタージャグラー</div>
 </div>
 <p class="text-center text-on-surface-variant/60 mt-md text-sm">ハナハナ・パルサーシリーズは近日対応予定</p>
 </section>
 <!-- Pricing -->
 <section class="py-xl bg-surface-container-low text-center" id="pricing">
-<div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-md">料金</h2>
-<div class="bg-surface-container border-2 border-gold rounded-3xl p-xl inline-block shadow-[0_0_30px_rgba(255,215,0,0.2)]">
-<p class="text-xl mb-xs text-on-surface-variant">スタンダード（買い切り）</p>
-<p class="text-6xl font-display-lg text-gold mb-md">¥980<span class="text-2xl text-on-surface-variant ml-2">（税込）</span></p>
-<ul class="text-left text-on-surface-variant mb-lg space-y-sm">
-<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-400">check_circle</span> 広告なし</li>
-<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-400">check_circle</span> オフライン完結</li>
-<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-400">check_circle</span> アップデート無料</li>
-<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-400">check_circle</span> データエクスポート対応</li>
-<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-400">check_circle</span> ジャグラー全9機種対応</li>
-</ul>
-<div class="flex flex-col sm:flex-row gap-sm justify-center">
-<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold px-lg py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs">
-<span class="material-symbols-outlined text-xl">android</span>Google Playで購入
-</a>
-</div>
-<p class="text-xs text-on-surface-variant/50 mt-sm">※ワンタイム購入（定額・サブスクなし）</p>
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">料金</h2>
+<p class="text-on-surface-variant mb-xl">まずは無料でお試し。気に入ったら収支記録を解放しよう。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
+  <!-- FREE -->
+  <div class="bg-surface-container border border-white/10 rounded-3xl p-xl flex flex-col">
+    <p class="font-label-md text-label-md text-on-surface-variant mb-sm">FREE</p>
+    <p class="text-5xl font-display-lg text-primary mb-xs">¥0</p>
+    <p class="text-on-surface-variant text-sm mb-md">基本機能は永久無料</p>
+    <ul class="text-on-surface-variant space-y-sm flex-1 mb-lg">
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> ボーナスカウント</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 設定ゲージ（リアルタイム設定推測）</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 差枚リアルタイム計算</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> セッション管理・復帰</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 全9機種対応・広告なし</li>
+    </ul>
+    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-surface-container-high text-primary font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs">
+      <span class="material-symbols-outlined text-xl">android</span>無料でダウンロード
+    </a>
+  </div>
+  <!-- PREMIUM -->
+  <div class="bg-surface-container border-2 border-gold rounded-3xl p-xl flex flex-col shadow-[0_0_30px_rgba(255,215,0,0.15)]">
+    <p class="font-label-md text-label-md text-gold mb-sm">PREMIUM</p>
+    <p class="text-5xl font-display-lg text-gold mb-xs">¥980</p>
+    <p class="text-on-surface-variant text-sm mb-md">買い切り・一度の購入で永久利用</p>
+    <ul class="text-on-surface-variant space-y-sm flex-1 mb-md">
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> FREE の全機能</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> 収支カレンダー（勝ち負けを一覧表示）</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> 月次集計・機種別・店舗別ランキング</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> 推移グラフ（月別・累積）</li>
+      <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> データ管理（JSON/CSV エクスポート）</li>
+    </ul>
+    <p class="text-on-surface-variant text-sm mb-md bg-surface-container-high rounded-xl p-sm">📈 <strong class="text-primary">収支記録があると何が変わるか。</strong><br>カレンダーに数字が積み上がっていくと、勝てる曜日・店・機種の傾向が見えてきます。¥980は、1回分の軍資金より安い。</p>
+    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold px-lg py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs">
+      <span class="material-symbols-outlined text-xl">android</span>アプリ内で購入（¥980）
+    </a>
+    <p class="text-xs text-on-surface-variant/50 mt-xs text-center">追加課金なし・サブスクなし</p>
+  </div>
 </div>
 </div>
 </section>
@@ -435,17 +479,31 @@
 <div class="space-y-sm">
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
-980円は買い切りですか？
+無料でダウンロードできますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">はい。一度ご購入いただければ、追加料金なくずっとご利用いただけます。</p>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">はい。アプリ本体は完全無料です。ボーナスカウント・設定ゲージ・差枚リアルタイム計算など基本機能をすべてお試しいただけます。</p>
+</details>
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group">
+<summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
+無料版とプレミアム版の違いは？
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">カウント系（ボーナス・差枚・設定ゲージ・セッション管理）は全て無料。アプリ内で¥980を購入すると、収支記録（カレンダー・月次集計・グラフ・データ管理）が使えるようになります。</p>
+</details>
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group">
+<summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
+¥980は買い切りですか？
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">はい。アプリ内で一度購入いただくと、追加料金なく永久にご利用いただけます。月額サブスクではありません。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 インターネット接続は必要ですか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">不要です。ホール内でもオフラインで全機能をご利用いただけます。</p>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">不要です。カウントから収支記録まで、全機能をオフラインでご利用いただけます。電波が悪いホールでも安心です。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
@@ -459,14 +517,14 @@
 機種変更したらデータは消えますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">JSON形式でエクスポート・インポートできます。スマホ機種変更後もデータを引き継げます。</p>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">プレミアム版ではJSON形式でエクスポート・インポートができます。機種変更後もデータを引き継いでご利用いただけます。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 どのジャグラー機種に対応していますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">マイジャグラーⅥ・アイムジャグラーEX・ファンキージャグラー2など全9機種対応。ハナハナ・パルサーは近日対応予定です。</p>
+<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">マイジャグラーⅥ・ゴーゴージャグラー3・アイムジャグラーEX・ファンキージャグラー2・ハッピージャグラーVIII・ジャグラーガールズSS・ミスタージャグラー・マイジャグラーV・ウルトラミラクルジャグラー、全9機種に対応しています。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
@@ -482,17 +540,38 @@ Android以外でも使えますか？
 <div class="absolute inset-0 bg-gradient-to-t from-neon-pink/10 to-transparent pointer-events-none"></div>
 <div class="relative z-10 max-w-2xl mx-auto">
 <h2 class="font-display-lg text-display-lg mb-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]">今すぐ、感覚打ちを卒業しよう。</h2>
-<p class="font-headline-lg text-headline-lg text-cyan mb-md">980円（買い切り）。ホール内で静かに、データが積み上がっていく。</p>
-<p class="text-on-surface-variant mb-xl">※18歳以上対象・現在はAndroid版のみ</p>
+<p class="font-headline-lg text-headline-lg text-cyan mb-md">まず無料で使ってみよう。<br>データが積み上がれば、¥980の価値はすぐわかる。</p>
+<p class="text-on-surface-variant mb-xl">※18歳以上対象・現在はAndroid版のみ（iOS近日対応）</p>
 <div class="flex flex-col sm:flex-row gap-md items-center justify-center">
 <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-headline-md px-xl py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all font-bold flex items-center justify-center gap-xs">
-<span class="material-symbols-outlined">android</span>Google Playで購入
+<span class="material-symbols-outlined">android</span>Google Playで無料DL
 </a>
-<a href="mailto:kuwa.designworks@gmail.com" class="text-on-surface-variant hover:text-white transition-colors underline">お問い合わせ</a>
+<button class="btn-disabled flex items-center justify-center gap-xs bg-surface-container text-on-surface-variant font-headline-md px-xl py-md rounded-2xl border border-white/10 cursor-not-allowed">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store（近日対応）
+</button>
 </div>
+<p class="text-on-surface-variant/50 text-sm mt-sm"><a href="mailto:kuwa.designworks@gmail.com" class="hover:text-white transition-colors underline">お問い合わせ</a></p>
 </div>
 </section>
 </main>
+<script>
+(function(){
+  var track = document.getElementById('galleryTrack');
+  var dots = document.querySelectorAll('.gallery-dot');
+  var total = 3, cur = 0;
+  function go(i){
+    cur = (i + total) % total;
+    track.style.transform = 'translateX(-' + cur * 100 + '%)';
+    dots.forEach(function(d,idx){
+      d.style.backgroundColor = idx === cur ? 'rgb(255,29,206)' : 'rgba(255,255,255,0.3)';
+    });
+  }
+  document.getElementById('galleryPrev').addEventListener('click', function(){ go(cur-1); });
+  document.getElementById('galleryNext').addEventListener('click', function(){ go(cur+1); });
+  dots.forEach(function(d){ d.addEventListener('click', function(){ go(parseInt(d.dataset.i)); }); });
+  setInterval(function(){ go(cur+1); }, 5000);
+})();
+</script>
 <!-- Footer -->
 <footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-7xl mx-auto">
