@@ -207,7 +207,7 @@
 <div class="flex justify-between items-center px-6 md:px-10 py-4 w-full">
 <div class="flex items-center gap-sm flex-1">
 <div class="w-8 h-8 rounded-xl overflow-hidden svg-container"><img alt="Logo" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
-<span class="font-headline-lg text-headline-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]"><span class="text-neon-pink">GOGO</span><span class="text-[#ffffff]">カウンター</span></span>
+<span class="font-headline-lg text-headline-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="text-neon-pink">GOGO</span><span class="text-[#ffffff]">カウンター</span></span>
 </div>
 <nav class="hidden md:flex justify-center gap-md lg:gap-lg font-label-md text-sm font-bold"><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#features">主な機能</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#gallery">ギャラリー</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#use-cases">利用シーン</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#reviews">ユーザーの声</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#compatibility">対応機種</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#pricing">料金</a><a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#faq">FAQ</a></nav>
 <div class="hidden md:flex flex-1 justify-end gap-sm items-center">
@@ -218,18 +218,30 @@
   Google Play
 </a>
 </div>
-<button aria-label="Menu" class="md:hidden text-primary p-xs flex-1 flex justify-end">
+<button id="menuBtn" aria-label="Menu" class="md:hidden text-primary p-xs flex-1 flex justify-end">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 </div>
 </header>
+<!-- モバイルドロワーメニュー -->
+<div id="mobileNav" class="hidden fixed top-[72px] left-0 w-full bg-background/98 backdrop-blur-md border-b border-white/10 z-40 py-md px-6">
+  <nav class="flex flex-col gap-sm font-bold text-base">
+    <a href="#features" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">主な機能</a>
+    <a href="#gallery" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">ギャラリー</a>
+    <a href="#use-cases" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">利用シーン</a>
+    <a href="#reviews" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">ユーザーの声</a>
+    <a href="#compatibility" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">対応機種</a>
+    <a href="#pricing" class="text-on-surface-variant hover:text-primary transition-colors py-sm border-b border-white/5" onclick="closeMobileNav()">料金</a>
+    <a href="#faq" class="text-on-surface-variant hover:text-primary transition-colors py-sm" onclick="closeMobileNav()">FAQ</a>
+  </nav>
+</div>
 <main class="flex-grow pt-[80px]">
 <!-- Hero Section -->
 <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-margin-desktop py-xl bg-[#000000]"><div class="neon-bg-flicker" style="background: radial-gradient(circle at center, rgba(47, 217, 244, 0.1) 0%, rgba(8, 7, 10, 1) 60%);"></div><div class="relative z-10 flex flex-col items-center text-center gap-md max-w-3xl mx-auto"><div class="w-48 h-48 md:w-64 md:h-64 svg-container relative flex items-center justify-center"><div class="absolute inset-0 rounded-full blur-2xl opacity-80" style="background: radial-gradient(circle, rgba(47, 217, 244, 0.6) 0%, rgba(47, 217, 244, 0) 60%); transform: scale(0.8);"></div><img alt="GOGO Counter Logo" class="w-full h-full object-contain relative z-10 animate-neon-flicker" src="images/logo_nobg.png"/></div><h1 class="font-display-lg text-display-lg md:text-display-lg drop-shadow-[0_0_15px_rgba(255,29,206,0.6)] mt-sm"><span class="text-neon-pink">GOGO</span><span class="text-[#ffffff]">カウンター</span></h1><p class="font-headline-md text-headline-md md:text-headline-lg text-cyan neon-text-cyan drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">至高の片手操作。リアルタイム設定判別。</p><p class="text-on-surface-variant">ジャグラーシリーズ全9機種対応。感覚ではなく、データで勝ちに行く。</p><div class="mt-md flex flex-col sm:flex-row gap-sm items-center"><div class="flex flex-col items-center gap-md w-full"><span class="text-gold font-bold text-headline-md drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">980 JPY</span><div class="flex flex-col sm:flex-row gap-md items-center w-full justify-center">
-<button class="bg-surface-container text-on-surface-variant font-label-md text-label-md px-lg py-sm rounded-xl transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap btn-disabled">
+<button class="bg-surface-container text-on-surface-variant font-label-md text-label-md px-lg py-sm rounded-xl transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto btn-disabled">
 <svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>App Store（近日対応）
 </button>
-<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-label-md text-label-md px-lg py-sm rounded-xl neon-bloom-primary hover:bg-primary-fixed transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap">
+<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-label-md text-label-md px-lg py-sm rounded-xl neon-bloom-primary hover:bg-primary-fixed transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
 <span class="material-symbols-outlined text-base" data-icon="android">android</span>Google Playで購入
 </a>
 </div></div></div><p class="text-xs text-on-surface-variant/50 mt-sm">※18歳以上対象</p></div></section>
@@ -357,21 +369,21 @@
 <div class="bg-surface-container-low border border-neon-pink shadow-[0_0_15px_rgba(255,29,206,0.2)] rounded-2xl p-md relative overflow-hidden">
 <div class="absolute -top-10 -right-10 w-32 h-32 bg-neon-pink/10 rounded-full blur-2xl"></div>
 <p class="text-neon-pink font-label-sm text-label-sm mb-sm relative z-10">Scene 01</p>
-<img alt="Scene01" class="w-full aspect-square object-cover rounded-xl mb-sm relative z-10" src="images/lp1.jpg"/>
+<img alt="Scene01" class="w-3/4 mx-auto aspect-square object-cover rounded-xl mb-sm relative z-10 block" src="images/lp1.jpg"/>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm relative z-10">台についた瞬間からスタート</h3>
 <p class="text-on-surface-variant relative z-10">機種を選んでカウントを開始するだけ。昨日打った台の続きも履歴からすぐ再開できる。</p>
 </div>
 <div class="bg-surface-container-low border border-cyan shadow-[0_0_15px_rgba(0,229,255,0.2)] rounded-2xl p-md relative overflow-hidden">
 <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan/10 rounded-full blur-2xl"></div>
 <p class="text-cyan font-label-sm text-label-sm mb-sm relative z-10">Scene 02</p>
-<img alt="Scene02" class="w-full aspect-square object-cover rounded-xl mb-sm relative z-10" src="images/lp2.jpg"/>
+<img alt="Scene02" class="w-3/4 mx-auto aspect-square object-cover rounded-xl mb-sm relative z-10 block" src="images/lp2.jpg"/>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm relative z-10">ボーナスが来るたびに1タップ</h3>
 <p class="text-on-surface-variant relative z-10">片手親指で完結。設定ゲージが積み上がるほど、高設定かどうかの確信度が上がっていく。</p>
 </div>
 <div class="bg-surface-container-low border border-gold shadow-[0_0_15px_rgba(255,215,0,0.2)] rounded-2xl p-md relative overflow-hidden">
 <div class="absolute -top-10 -right-10 w-32 h-32 bg-gold/10 rounded-full blur-2xl"></div>
 <p class="text-gold font-label-sm text-label-sm mb-sm relative z-10">Scene 03</p>
-<img alt="Scene03" class="w-full aspect-square object-cover rounded-xl mb-sm relative z-10" src="images/lp3.jpg"/>
+<img alt="Scene03" class="w-3/4 mx-auto aspect-square object-cover rounded-xl mb-sm relative z-10 block" src="images/lp3.jpg"/>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm relative z-10">設定分析が「やめ時」を教えてくれる</h3>
 <p class="text-on-surface-variant relative z-10">500G超えて合算がキツくなってきた。設定分析を開くと、データが今の立ち位置を示してくれる。感覚ではなく根拠のある撤退判断。</p>
 </div>
@@ -438,7 +450,10 @@
       <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> セッション管理・復帰</li>
       <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 全9機種対応・広告なし</li>
     </ul>
-    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-surface-container-high text-primary font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs">
+    <button class="btn-disabled flex items-center justify-center gap-xs bg-surface-container text-on-surface-variant font-bold px-lg py-sm rounded-full border border-white/10 w-full">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>iOS版は近日対応
+    </button>
+    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="mt-sm bg-surface-container-high text-primary font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs w-full">
       <span class="material-symbols-outlined text-xl">android</span>無料でダウンロード
     </a>
   </div>
@@ -475,56 +490,56 @@
 無料でダウンロードできますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">はい。アプリ本体は完全無料です。ボーナスカウント・設定ゲージ・差枚リアルタイム計算など基本機能をすべてお試しいただけます。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">はい。アプリ本体は完全無料です。ボーナスカウント・設定ゲージ・差枚リアルタイム計算など基本機能をすべてお試しいただけます。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 無料版とプレミアム版の違いは？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">カウント系（ボーナス・差枚・設定ゲージ・セッション管理）は全て無料。アプリ内で¥980を購入すると、収支記録（カレンダー・月次集計・グラフ・データ管理）が使えるようになります。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">カウント系（ボーナス・差枚・設定ゲージ・セッション管理）は全て無料。アプリ内で¥980を購入すると、収支記録（カレンダー・月次集計・グラフ・データ管理）が使えるようになります。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 ¥980は買い切りですか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">はい。アプリ内で一度購入いただくと、追加料金なく永久にご利用いただけます。月額サブスクではありません。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">はい。アプリ内で一度購入いただくと、追加料金なく永久にご利用いただけます。月額サブスクではありません。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 インターネット接続は必要ですか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">不要です。カウントから収支記録まで、全機能をオフラインでご利用いただけます。電波が悪いホールでも安心です。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">不要です。カウントから収支記録まで、全機能をオフラインでご利用いただけます。電波が悪いホールでも安心です。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 データはどこに保存されますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">お使いの端末内にのみ保存されます。クラウドや外部サーバーへの送信は一切ありません。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">お使いの端末内にのみ保存されます。クラウドや外部サーバーへの送信は一切ありません。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 機種変更したらデータは消えますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">プレミアム版ではJSON形式でエクスポート・インポートができます。機種変更後もデータを引き継いでご利用いただけます。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">プレミアム版ではJSON形式でエクスポート・インポートができます。機種変更後もデータを引き継いでご利用いただけます。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 どのジャグラー機種に対応していますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">マイジャグラーⅥ・ゴーゴージャグラー3・アイムジャグラーEX・ファンキージャグラー2・ハッピージャグラーVIII・ジャグラーガールズSS・ミスタージャグラー・マイジャグラーV・ウルトラミラクルジャグラー、全9機種に対応しています。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">マイジャグラーⅥ・ゴーゴージャグラー3・アイムジャグラーEX・ファンキージャグラー2・ハッピージャグラーVIII・ジャグラーガールズSS・ミスタージャグラー・マイジャグラーV・ウルトラミラクルジャグラー、全9機種に対応しています。</p>
 </details>
 <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
 <summary class="font-headline-md cursor-pointer list-none flex justify-between items-center text-primary">
 Android以外でも使えますか？
 <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<p class="mt-sm text-on-surface-variant border-t border-white/10 pt-sm">現在はAndroid版のみです。iOS版（App Store）は近日対応予定です。</p>
+<p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">現在はAndroid版のみです。iOS版（App Store）は近日対応予定です。</p>
 </details>
 </div>
 </section>
@@ -536,10 +551,10 @@ Android以外でも使えますか？
 <p class="font-headline-lg text-headline-lg text-cyan mb-md">まず無料でおためしください。</p>
 <p class="text-on-surface-variant mb-xl">※18歳以上対象・現在はAndroid版のみ（iOS近日対応）</p>
 <div class="flex flex-col sm:flex-row gap-md items-center justify-center">
-<button class="btn-disabled flex items-center justify-center gap-xs bg-surface-container text-on-surface-variant font-headline-md px-xl py-md rounded-2xl border border-white/10 whitespace-nowrap">
+<button class="btn-disabled flex items-center justify-center gap-xs bg-surface-container text-on-surface-variant font-headline-md px-xl py-md rounded-2xl border border-white/10 whitespace-nowrap w-full sm:w-auto">
 <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store（近日対応）
 </button>
-<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-headline-md px-xl py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap">
+<a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-headline-md px-xl py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all font-bold flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
 <span class="material-symbols-outlined">android</span>Google Playで無料DL
 </a>
 </div>
@@ -547,6 +562,20 @@ Android以外でも使えますか？
 </div>
 </section>
 </main>
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mobileNav');
+  function closeMobileNav(){ nav.classList.add('hidden'); }
+  window.closeMobileNav = closeMobileNav;
+  if(btn && nav){
+    btn.addEventListener('click', function(){ nav.classList.toggle('hidden'); });
+    document.addEventListener('click', function(e){
+      if(!nav.contains(e.target) && !btn.contains(e.target)) closeMobileNav();
+    });
+  }
+})();
+</script>
 <!-- Footer -->
 <footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-7xl mx-auto">
