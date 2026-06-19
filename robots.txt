@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oimochan99.github.io/gogo-counter/sitemap.xml
