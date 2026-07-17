@@ -55,7 +55,7 @@
 <meta name="twitter:title" content="GOGOカウンター | 設定が、&quot;見える&quot;。">
 <meta name="twitter:description" content="ジャグラー専用の設定判別・小役カウンター。全8機種対応・基本無料。">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
@@ -101,9 +101,22 @@
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
     }
-    /* 見出し用：デラゴシック（ストアグラフィックと同じ骨格） */
-    .font-dela { font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
+    /* 見出し用：Noto Sans JP 900（極太）／ロゴ・数字アクセント：Anton（ロゴのGOGOと同じ） */
+    .font-head { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; letter-spacing: 0.01em; }
+    .font-anton { font-family: 'Anton', 'Noto Sans JP', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
     .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+
+    /* 旧LPから継続：ネオン管が切れかけのチカチカ（ロゴ用） */
+    @keyframes neon-broken-flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 30px rgba(255,74,141,0.8)) drop-shadow(0 0 50px rgba(47,217,244,0.4)); }
+        20%, 24%, 55% { opacity: 0.2; filter: brightness(0.5) drop-shadow(0 0 5px rgba(255,74,141,0.2)); }
+        21%, 54%, 56% { opacity: 0.7; filter: brightness(1); }
+        80% { opacity: 0.9; }
+        81% { opacity: 0.1; }
+        82% { opacity: 1; }
+    }
+    .animate-neon-flicker { animation: neon-broken-flicker 4s linear infinite; }
+    @media (prefers-reduced-motion: reduce) { .animate-neon-flicker { animation: none; } }
 
     .material-symbols-outlined {
         font-family: 'Material Symbols Outlined';
@@ -164,7 +177,7 @@
 <div class="flex justify-between items-center px-6 md:px-10 py-4 w-full">
   <a href="#" class="flex items-center gap-sm flex-1">
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
-    <span class="font-dela text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
+    <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
   </a>
   <nav class="hidden min-[1200px]:flex justify-center gap-md lg:gap-[32px] text-sm font-bold">
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#kachikachi">カチカチ君卒業</a>
@@ -203,10 +216,42 @@
 
 <main class="flex-grow pt-[64px]">
 
-<!-- ===== ヒーロー ===== -->
-<section class="relative overflow-hidden px-margin-mobile md:px-margin-desktop py-xl md:py-[88px]" style="background: radial-gradient(120% 90% at 70% 10%, rgba(69,16,84,0.55) 0%, rgba(10,10,10,1) 62%), #0a0a0a;">
+<!-- ===== ヒーロー（現行LPのネオンチカチカ演出を継続） ===== -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop py-xl bg-black">
+  <div aria-hidden="true" class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(47, 217, 244, 0.1) 0%, rgba(8, 7, 10, 1) 60%);"></div>
+  <div class="relative z-10 flex flex-col items-center text-center gap-md max-w-3xl mx-auto hero-fade">
+    <div class="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 rounded-full blur-2xl opacity-80" style="background: radial-gradient(circle, rgba(47, 217, 244, 0.6) 0%, rgba(47, 217, 244, 0) 60%); transform: scale(0.8);"></div>
+      <img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain relative z-10 animate-neon-flicker" src="images/logo_nobg.png"/>
+    </div>
+    <h1 class="font-head text-[40px] md:text-[52px] leading-tight drop-shadow-[0_0_15px_rgba(255,29,206,0.6)]"><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></h1>
+    <p class="text-cyan neon-text-cyan text-xl md:text-2xl font-bold">親指1本で、設定が"見える"。</p>
+    <p class="text-on-surface-variant">ジャグラー専用の設定判別 × 小役カウンター。カチカチ君は、もういらない。</p>
+
+    <!-- バッジ3点 -->
+    <div class="flex flex-wrap gap-sm justify-center">
+      <span class="inline-flex items-center gap-xs bg-surface-container border border-gold/40 text-gold text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">paid</span>基本無料</span>
+      <span class="inline-flex items-center gap-xs bg-surface-container border border-cyan/40 text-cyan text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">casino</span>全8機種対応</span>
+      <span class="inline-flex items-center gap-xs bg-surface-container border border-neon-pink/40 text-neon-pink text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">swipe_up</span>片手操作OK</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-sm flex flex-col sm:flex-row gap-sm items-center justify-center w-full">
+      <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold text-lg px-lg py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
+        <span class="material-symbols-outlined">android</span>Google Playで無料ダウンロード
+      </a>
+      <button class="btn-disabled bg-surface-container text-on-surface-variant font-bold px-lg py-md rounded-2xl border border-white/10 flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store（近日対応）
+      </button>
+    </div>
+    <p class="text-xs text-on-surface-variant/50">※18歳以上対象・広告なし・収支記録のみ¥980買い切り</p>
+  </div>
+</section>
+
+<!-- ===== 設定が"見える"（ゲージ推し） ===== -->
+<section class="relative overflow-hidden px-margin-mobile md:px-margin-desktop py-xl md:py-[88px]" id="gauge" style="background: radial-gradient(120% 90% at 70% 10%, rgba(69,16,84,0.55) 0%, rgba(10,10,10,1) 62%), #0a0a0a;">
   <!-- 背景のスロット記号（さりげなく） -->
-  <div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none opacity-[0.05] text-[120px] leading-none font-dela">
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none opacity-[0.05] text-[120px] leading-none font-anton">
     <span class="absolute top-[8%] left-[4%]">7</span>
     <span class="absolute top-[55%] left-[12%]">BAR</span>
     <span class="absolute top-[20%] right-[6%]">GOGO!</span>
@@ -214,18 +259,18 @@
   </div>
 
   <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
-    <!-- 左：コピー＋ゲージデモ＋CTA -->
-    <div class="hero-fade">
-      <p class="text-cyan neon-text-cyan font-bold tracking-widest text-sm mb-sm">ジャグラー専用｜設定判別 × 小役カウンター</p>
-      <h1 class="font-dela text-[40px] leading-[1.25] md:text-[52px] md:leading-[1.2] text-white mb-md drop-shadow-[0_0_18px_rgba(255,29,206,0.35)]">
+    <!-- 左：コピー＋ゲージデモ -->
+    <div>
+      <p class="text-cyan neon-text-cyan font-bold tracking-widest text-sm mb-sm">SETTING GAUGE｜このアプリ最大の武器</p>
+      <h2 class="font-head text-[36px] leading-[1.25] md:text-[48px] md:leading-[1.2] text-white mb-md drop-shadow-[0_0_18px_rgba(255,29,206,0.35)]">
         設定が、<br>"<span class="text-neon-pink neon-text-pink">見える</span>"<span class="text-neon-pink neon-text-pink">。</span>
-      </h1>
+      </h2>
       <p class="text-on-surface-variant text-lg mb-md">
-        親指1本でカウントするだけ。合算・ぶどう・REG確率をメーカー公表値と自動で照合し、いま打っている台が<strong class="text-white">設定1〜6のどこにいるか</strong>を色とゲージで表示します。
+        カウントするだけで、合算・ぶどう・REG確率をメーカー公表値と自動で照合。いま打っている台が<strong class="text-white">設定1〜6のどこにいるか</strong>を色とゲージで表示します。
       </p>
 
       <!-- 設定ゲージデモ（アプリと同じ6色） -->
-      <div class="gauge-card bg-surface-container/80 border border-white/10 rounded-2xl p-md mb-md">
+      <div class="gauge-card bg-surface-container/80 border border-white/10 rounded-2xl p-md">
         <div class="flex justify-between text-xs text-on-surface-variant mb-xs font-mono-num">
           <span>設定1</span><span>2</span><span>3</span><span>4</span><span>5</span><span class="text-g6 font-bold">設定6</span>
         </div>
@@ -241,28 +286,10 @@
         </div>
         <p class="text-[11px] text-on-surface-variant/50 mt-xs">※表示イメージ。アプリでは機種別スペックとリアルタイム照合します</p>
       </div>
-
-      <!-- バッジ3点 -->
-      <div class="flex flex-wrap gap-sm mb-md">
-        <span class="inline-flex items-center gap-xs bg-surface-container border border-gold/40 text-gold text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">paid</span>基本無料</span>
-        <span class="inline-flex items-center gap-xs bg-surface-container border border-cyan/40 text-cyan text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">casino</span>全8機種対応</span>
-        <span class="inline-flex items-center gap-xs bg-surface-container border border-neon-pink/40 text-neon-pink text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">swipe_up</span>片手操作OK</span>
-      </div>
-
-      <!-- CTA -->
-      <div class="flex flex-col sm:flex-row gap-sm items-stretch sm:items-center">
-        <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold text-lg px-lg py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs whitespace-nowrap">
-          <span class="material-symbols-outlined">android</span>Google Playで無料ダウンロード
-        </a>
-        <button class="btn-disabled bg-surface-container text-on-surface-variant font-bold px-lg py-md rounded-2xl border border-white/10 flex items-center justify-center gap-xs whitespace-nowrap">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store（近日対応）
-        </button>
-      </div>
-      <p class="text-xs text-on-surface-variant/50 mt-sm">※18歳以上対象・広告なし・収支記録のみ¥980買い切り</p>
     </div>
 
     <!-- 右：実機スクショ -->
-    <div class="hero-fade-2 flex justify-center md:justify-end">
+    <div class="flex justify-center md:justify-end">
       <div class="relative">
         <div aria-hidden="true" class="absolute -inset-6 rounded-[40px] blur-2xl opacity-60" style="background: radial-gradient(circle, rgba(255,29,206,0.35) 0%, rgba(0,229,255,0.15) 55%, transparent 75%);"></div>
         <img alt="設定分析画面：合算・ぶどう・REG確率と設定ゲージのリアルタイム表示" class="relative rounded-3xl border border-white/20 shadow-[0_0_40px_rgba(255,29,206,0.35)] max-h-[520px] w-auto" src="images/ss_analysis.jpg"/>
@@ -273,7 +300,7 @@
 
 <!-- ===== カチカチ君卒業 ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="kachikachi">
-  <h2 class="font-dela text-[28px] md:text-[36px] text-white text-center mb-sm">カチカチ君は、<span class="text-neon-pink neon-text-pink">もう卒業。</span></h2>
+  <h2 class="font-head text-[28px] md:text-[36px] text-white text-center mb-sm">カチカチ君は、<span class="text-neon-pink neon-text-pink">もう卒業。</span></h2>
   <p class="text-center text-on-surface-variant max-w-2xl mx-auto mb-xl">物理の小役カウンターは「数える」まで。GOGOカウンターは、数えた先の<strong class="text-white">確率計算から設定推測まで全自動</strong>です。</p>
 
   <!-- 3ステップ -->
@@ -342,7 +369,7 @@
 <!-- ===== 選ばれる理由 ===== -->
 <section class="py-xl bg-surface-container-low">
 <div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xl">GOGOカウンターが<br class="sm:hidden">選ばれる理由</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">GOGOカウンターが<br class="sm:hidden">選ばれる理由</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md text-center">
       <span class="material-symbols-outlined text-neon-pink text-5xl mb-sm">touch_app</span>
@@ -365,12 +392,12 @@
 
 <!-- ===== 主な機能 ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="features">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xl">主な機能</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">主な機能</h2>
 
   <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
     <div class="flex-1">
       <p class="font-mono-num text-neon-pink text-sm mb-xs">01 / COUNT</p>
-      <h3 class="font-dela text-2xl text-neon-pink mb-sm">1タップ小役カウント</h3>
+      <h3 class="font-head text-2xl text-neon-pink mb-sm">1タップ小役カウント</h3>
       <p class="text-on-surface-variant text-lg">ぶどう・単独BIG・チェリー重複BIG・単独REG・チェリー重複REGを1タップで記録。単独とチェリー重複を分けて数えられるから、設定推測の精度が上がります。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -381,7 +408,7 @@
   <div class="flex flex-col md:flex-row-reverse items-center gap-lg mb-xl">
     <div class="flex-1">
       <p class="font-mono-num text-cyan text-sm mb-xs">02 / GAUGE</p>
-      <h3 class="font-dela text-2xl text-cyan mb-sm">設定ゲージ ─ 青から赤へ</h3>
+      <h3 class="font-head text-2xl text-cyan mb-sm">設定ゲージ ─ 青から赤へ</h3>
       <p class="text-on-surface-variant text-lg">合算・単独REG・ぶどう確率をメーカー公表スペックの設定1〜6ボーダーとリアルタイム比較。設定1の青から設定6の赤へ変わる色とゲージで、「今の立ち位置」がひと目でわかります。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -392,7 +419,7 @@
   <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
     <div class="flex-1">
       <p class="font-mono-num text-gold text-sm mb-xs">03 / MEDALS</p>
-      <h3 class="font-dela text-2xl text-gold mb-sm">差枚リアルタイム計算</h3>
+      <h3 class="font-head text-2xl text-gold mb-sm">差枚リアルタイム計算</h3>
       <p class="text-on-surface-variant text-lg">ボーナスをまたいだ自分の差枚を自動追跡。「今日プラスかマイナスか」を感覚ではなく数字で把握できます。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -403,7 +430,7 @@
   <div class="flex flex-col md:flex-row-reverse items-center gap-lg mb-xl">
     <div class="flex-1">
       <p class="font-mono-num text-neon-pink text-sm mb-xs">04 / RECORD <span class="text-gold border border-gold/50 rounded-full px-xs py-[1px] text-[10px] ml-xs align-middle">PREMIUM ¥980</span></p>
-      <h3 class="font-dela text-2xl text-neon-pink mb-sm">収支記録 ─ 勝ちパターンが見えてくる</h3>
+      <h3 class="font-head text-2xl text-neon-pink mb-sm">収支記録 ─ 勝ちパターンが見えてくる</h3>
       <p class="text-on-surface-variant text-lg">カレンダー・月次集計・機種/店舗別ランキング・推移グラフで収支を多角的に管理。数字が積み上がるほど、勝てる曜日・店・機種の傾向が見えてきます。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -414,7 +441,7 @@
   <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
     <div class="flex-1">
       <p class="font-mono-num text-cyan text-sm mb-xs">05 / RESUME</p>
-      <h3 class="font-dela text-2xl text-cyan mb-sm">セッション復帰</h3>
+      <h3 class="font-head text-2xl text-cyan mb-sm">セッション復帰</h3>
       <p class="text-on-surface-variant text-lg">休憩・移動・閉店持ち越しでも、履歴から「この台の続き」を即再開。カウントデータが消えない安心感があります。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -425,7 +452,7 @@
   <div class="flex flex-col md:flex-row-reverse items-center gap-lg">
     <div class="flex-1">
       <p class="font-mono-num text-gold text-sm mb-xs">06 / BACKUP</p>
-      <h3 class="font-dela text-2xl text-gold mb-sm">データ管理・引き継ぎ</h3>
+      <h3 class="font-head text-2xl text-gold mb-sm">データ管理・引き継ぎ</h3>
       <p class="text-on-surface-variant text-lg">収支データはJSON形式でエクスポート／インポート可能。スマホを買い替えても、積み上げたデータごと引き継げます。</p>
     </div>
     <div class="flex-1 w-full flex justify-center">
@@ -437,7 +464,7 @@
 <!-- ===== ギャラリー ===== -->
 <section class="py-xl bg-surface-container-low" id="gallery">
 <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xl">ギャラリー</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">ギャラリー</h2>
   <div class="flex overflow-x-auto gap-md pb-md snap-x hide-scrollbar">
     <div class="snap-center shrink-0 w-48 md:w-56">
       <img alt="メインカウンター" class="rounded-2xl border border-white/10 w-full shadow-[0_0_20px_rgba(0,0,0,0.6)]" src="images/scene01.jpg"/>
@@ -469,7 +496,7 @@
 
 <!-- ===== 利用シーン ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="use-cases">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xl">こんな場面で使える</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">こんな場面で使える</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
     <div class="bg-surface-container-low border border-neon-pink shadow-[0_0_15px_rgba(255,29,206,0.2)] rounded-2xl p-md relative overflow-hidden">
       <p class="text-neon-pink text-lg font-bold mb-sm text-center font-mono-num">SCENE 01</p>
@@ -495,7 +522,7 @@
 <!-- ===== 誠実設計 ===== -->
 <section class="py-xl bg-surface-container-low" id="honest">
 <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-sm">盲信させないための、<span class="text-cyan neon-text-cyan">3つの設計</span></h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-sm">盲信させないための、<span class="text-cyan neon-text-cyan">3つの設計</span></h2>
   <p class="text-center text-on-surface-variant max-w-2xl mx-auto mb-xl">設定判別ツールは「当たる」と言い切った時点で嘘になります。GOGOカウンターは、正直であることを設計方針にしています。</p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
@@ -519,7 +546,7 @@
 
 <!-- ===== Google Playレビュー ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto" id="reviews">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xs">Google Playレビューより</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">Google Playレビューより</h2>
   <p class="text-center text-on-surface-variant text-sm mb-xl">実際にGoogle Playへ投稿されたレビューの抜粋です（2026年7月）</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
@@ -538,7 +565,7 @@
 
 <!-- ===== 対応機種 ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="compatibility">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xs">対応機種</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">対応機種</h2>
   <p class="text-center text-gold font-bold text-xl mb-xl">ジャグラーシリーズ 全8機種対応</p>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-sm md:gap-md text-center text-sm md:text-base">
     <div class="bg-gradient-to-b from-red-700 to-red-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] text-white font-bold flex items-center justify-center">マイジャグラーV</div>
@@ -557,13 +584,13 @@
 <!-- ===== 料金 ===== -->
 <section class="py-xl bg-surface-container-low text-center" id="pricing">
 <div class="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white mb-xs">料金</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white mb-xs">料金</h2>
   <p class="text-on-surface-variant mb-xl">まずは無料でお試し。気に入ったら収支記録を解放しよう。</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
     <!-- FREE -->
     <div class="bg-surface-container border border-white/10 rounded-3xl p-lg flex flex-col">
       <p class="font-mono-num text-on-surface-variant mb-sm">FREE</p>
-      <p class="text-5xl font-dela text-primary mb-xs">¥0</p>
+      <p class="text-5xl font-anton text-primary mb-xs">¥0</p>
       <p class="text-on-surface-variant text-sm mb-md">基本機能は永久無料・広告なし</p>
       <ul class="text-on-surface-variant space-y-sm flex-1 mt-md mb-lg">
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 小役・ボーナスカウント</li>
@@ -579,7 +606,7 @@
     <!-- PREMIUM -->
     <div class="bg-surface-container border-2 border-gold rounded-3xl p-lg flex flex-col shadow-[0_0_30px_rgba(255,215,0,0.15)]">
       <p class="font-mono-num text-gold mb-sm">PREMIUM</p>
-      <p class="text-5xl font-dela text-gold mb-xs">¥980</p>
+      <p class="text-5xl font-anton text-gold mb-xs">¥980</p>
       <p class="text-on-surface-variant text-sm mb-md">買い切り・一度の購入で永久利用</p>
       <ul class="text-on-surface-variant space-y-sm flex-1 mt-md mb-md">
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> FREEの全機能</li>
@@ -600,7 +627,7 @@
 
 <!-- ===== FAQ ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto" id="faq">
-  <h2 class="font-dela text-[28px] md:text-[32px] text-white text-center mb-xl">よくある質問</h2>
+  <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">よくある質問</h2>
   <div class="space-y-sm">
     <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
       <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">無料でダウンロードできますか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
@@ -662,7 +689,7 @@
 <section class="py-xl text-center relative overflow-hidden px-margin-mobile md:px-margin-desktop border-t border-white/10">
   <div class="absolute inset-0 bg-gradient-to-t from-neon-pink/10 to-transparent pointer-events-none"></div>
   <div class="relative z-10 max-w-2xl mx-auto">
-    <h2 class="font-dela text-[32px] md:text-[44px] leading-[1.3] text-white mb-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]">今すぐ、感覚打ちを<br>卒業しよう。</h2>
+    <h2 class="font-head text-[32px] md:text-[44px] leading-[1.3] text-white mb-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]">今すぐ、感覚打ちを<br>卒業しよう。</h2>
     <p class="text-cyan neon-text-cyan text-xl font-bold mb-md">まずは無料で。カチカチ君はもういらない。</p>
     <p class="text-on-surface-variant mb-xl">※18歳以上対象・現在はAndroid版のみ（iOS近日対応）</p>
     <div class="flex flex-col sm:flex-row gap-md items-center justify-center">
@@ -696,9 +723,9 @@
 <!-- ===== フッター ===== -->
 <footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-7xl mx-auto">
-  <div class="flex items-center gap-sm flex-1 font-dela text-lg drop-shadow-[0_0_5px_rgba(255,29,206,0.3)]">
+  <div class="flex items-center gap-sm flex-1 font-head text-lg drop-shadow-[0_0_5px_rgba(255,29,206,0.3)]">
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
-    <div><span class="text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
+    <div><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
   </div>
   <div class="flex justify-center flex-1 gap-md text-xs">
     <a class="text-on-surface-variant hover:text-white transition-colors" href="terms.html">利用規約</a>
