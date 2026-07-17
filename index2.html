@@ -135,24 +135,28 @@
         background: linear-gradient(90deg, #3b82f6, #22d3ee, #a3e635, #facc15, #fb923c, #ef4444);
         border-radius: 999px;
     }
+    /* 針：セクションが画面に入ったら動き出し、見えている間はループ（JSで is-live を付与） */
     @keyframes needle-sweep {
         0%   { left: 4%; }
-        30%  { left: 62%; }
-        50%  { left: 45%; }
-        72%  { left: 84%; }
+        12%  { left: 62%; }
+        22%  { left: 45%; }
+        34%  { left: 84%; }
+        46%  { left: 76%; }
+        60%  { left: 76%; }
+        72%  { left: 68%; }
+        84%  { left: 82%; }
         100% { left: 76%; }
     }
-    .gauge-needle {
-        animation: needle-sweep 3.4s cubic-bezier(.45,.05,.25,1) 0.6s both;
+    .gauge-card.is-live .gauge-needle {
+        animation: needle-sweep 7s cubic-bezier(.45,.05,.25,1) infinite;
     }
     @keyframes gauge-glow {
         0%, 100% { box-shadow: 0 0 14px rgba(239,68,68,0.0); }
-        60%      { box-shadow: 0 0 22px rgba(239,68,68,0.55); }
+        40%      { box-shadow: 0 0 22px rgba(239,68,68,0.55); }
     }
-    .gauge-card { animation: gauge-glow 3.4s ease 0.6s both; }
+    .gauge-card.is-live { animation: gauge-glow 7s ease infinite; }
     @media (prefers-reduced-motion: reduce) {
-        .gauge-needle { animation: none; left: 76%; }
-        .gauge-card { animation: none; }
+        .gauge-card.is-live .gauge-needle, .gauge-card.is-live { animation: none; }
     }
 
     @keyframes hero-fade-up {
@@ -716,6 +720,20 @@
     document.addEventListener('click', function(e){
       if(!nav.contains(e.target) && !btn.contains(e.target)) closeMobileNav();
     });
+  }
+
+  // 設定ゲージ：画面に入ったら針アニメーションを開始（見えている間ループ・外れたらリセット）
+  var gaugeCard = document.querySelector('.gauge-card');
+  if(gaugeCard){
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          gaugeCard.classList.toggle('is-live', en.isIntersecting);
+        });
+      }, { threshold: 0.4 }).observe(gaugeCard);
+    } else {
+      gaugeCard.classList.add('is-live');
+    }
   }
 })();
 </script>
