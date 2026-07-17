@@ -253,7 +253,7 @@
 </section>
 
 <!-- ===== 設定が"見える"（ゲージ推し） ===== -->
-<section class="relative overflow-hidden px-margin-mobile md:px-margin-desktop py-xl md:py-[88px]" id="gauge" style="background: radial-gradient(120% 90% at 70% 10%, rgba(69,16,84,0.55) 0%, rgba(10,10,10,1) 62%), #0a0a0a;">
+<section class="relative overflow-hidden py-xl md:py-[88px]" id="gauge" style="background: radial-gradient(120% 90% at 70% 10%, rgba(69,16,84,0.55) 0%, rgba(10,10,10,1) 62%), #0a0a0a;">
   <!-- 背景のスロット記号（さりげなく） -->
   <div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none opacity-[0.05] text-[120px] leading-none font-sora">
     <span class="absolute top-[8%] left-[4%]">7</span>
@@ -262,7 +262,7 @@
     <span class="absolute bottom-[6%] right-[16%]">7</span>
   </div>
 
-  <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+  <div class="relative z-10 max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
     <!-- 左：コピー＋ゲージデモ -->
     <div>
       <p class="text-cyan neon-text-cyan font-bold tracking-widest text-sm mb-sm">SETTING GAUGE｜このアプリ最大の武器</p>
@@ -330,7 +330,7 @@
   </div>
 
   <!-- 比較：2カード -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-4xl mx-auto items-stretch">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md items-stretch">
     <!-- 物理カウンター -->
     <div class="bg-surface-container-low border border-white/10 rounded-3xl p-md md:p-lg opacity-80">
       <div class="flex items-center gap-sm mb-md min-h-[44px]">
@@ -545,7 +545,7 @@
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="reviews">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">Google Playレビューより</h2>
   <p class="text-center text-on-surface-variant text-sm mb-xl">実際にGoogle Playへ投稿されたレビューの抜粋です（2026年7月）</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-4xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
       <div class="flex text-gold mb-sm" style="font-variation-settings:'FILL' 1"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
       <p class="text-on-surface-variant mb-sm text-sm">「ホールで実際に使ってみて、片手でサクサク操作できる設計に驚きました。横画面がかなり使いやすい。ぶどうカウントのボタンが大きくて誤タップもほぼゼロ。設定の色分けもわかりやすく今まで使ってた無料アプリとは完成度が全然違います。」</p>
@@ -583,7 +583,7 @@
 <div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
   <h2 class="font-head text-[28px] md:text-[32px] text-white mb-xs">料金</h2>
   <p class="text-on-surface-variant mb-xl">まずは無料でお試し。気に入ったら収支記録を解放しよう。</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left max-w-4xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
     <!-- FREE -->
     <div class="bg-surface-container border border-white/10 rounded-3xl p-lg flex flex-col">
       <p class="font-mono-num text-on-surface-variant mb-sm">FREE</p>
@@ -733,7 +733,7 @@
 
 <!-- ===== フッター ===== -->
 <footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 gap-md w-full">
   <div class="flex items-center gap-sm flex-1 font-head text-lg drop-shadow-[0_0_5px_rgba(255,29,206,0.3)]">
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
     <div><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
