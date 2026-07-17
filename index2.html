@@ -55,7 +55,7 @@
 <meta name="twitter:title" content="GOGOカウンター | 設定が、&quot;見える&quot;。">
 <meta name="twitter:description" content="ジャグラー専用の設定判別・小役カウンター。全8機種対応・基本無料。">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
@@ -101,9 +101,9 @@
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
     }
-    /* 見出し用：Noto Sans JP 900（極太）／ロゴ・数字アクセント：Anton（ロゴのGOGOと同じ） */
+    /* 見出し用：Noto Sans JP 900（極太）／ロゴ・数字アクセント：Sora（旧LPと同じ） */
     .font-head { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; letter-spacing: 0.01em; }
-    .font-anton { font-family: 'Anton', 'Noto Sans JP', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
+    .font-sora { font-family: 'Sora', 'Noto Sans JP', sans-serif; font-weight: 800; letter-spacing: 0.01em; }
     .font-mono-num { font-family: 'JetBrains Mono', monospace; }
 
     /* 旧LPから継続：ネオン管が切れかけのチカチカ（ロゴ用） */
@@ -181,7 +181,7 @@
 <div class="flex justify-between items-center px-6 md:px-10 py-4 w-full">
   <a href="#" class="flex items-center gap-sm flex-1">
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
-    <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
+    <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
   </a>
   <nav class="hidden min-[1200px]:flex justify-center gap-md lg:gap-[32px] text-sm font-bold">
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#kachikachi">カチカチ君卒業</a>
@@ -228,7 +228,7 @@
       <div aria-hidden="true" class="absolute inset-0 rounded-full blur-2xl opacity-80" style="background: radial-gradient(circle, rgba(47, 217, 244, 0.6) 0%, rgba(47, 217, 244, 0) 60%); transform: scale(0.8);"></div>
       <img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain relative z-10 animate-neon-flicker" src="images/logo_nobg.png"/>
     </div>
-    <h1 class="font-head text-[40px] md:text-[52px] leading-tight drop-shadow-[0_0_15px_rgba(255,29,206,0.6)]"><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></h1>
+    <h1 class="font-head text-[40px] md:text-[52px] leading-tight drop-shadow-[0_0_15px_rgba(255,29,206,0.6)]"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></h1>
     <p class="text-cyan neon-text-cyan text-xl md:text-2xl font-bold">親指1本で、設定が"見える"。</p>
     <p class="text-on-surface-variant">ジャグラー専用の設定判別 × 小役カウンター。カチカチ君は、もういらない。</p>
 
@@ -255,7 +255,7 @@
 <!-- ===== 設定が"見える"（ゲージ推し） ===== -->
 <section class="relative overflow-hidden px-margin-mobile md:px-margin-desktop py-xl md:py-[88px]" id="gauge" style="background: radial-gradient(120% 90% at 70% 10%, rgba(69,16,84,0.55) 0%, rgba(10,10,10,1) 62%), #0a0a0a;">
   <!-- 背景のスロット記号（さりげなく） -->
-  <div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none opacity-[0.05] text-[120px] leading-none font-anton">
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none opacity-[0.05] text-[120px] leading-none font-sora">
     <span class="absolute top-[8%] left-[4%]">7</span>
     <span class="absolute top-[55%] left-[12%]">BAR</span>
     <span class="absolute top-[20%] right-[6%]">GOGO!</span>
@@ -329,50 +329,43 @@
     </div>
   </div>
 
-  <!-- 比較表 -->
-  <div class="overflow-x-auto">
-    <table class="w-full text-sm md:text-base border-separate border-spacing-0 min-w-[560px]">
-      <thead>
-        <tr>
-          <th class="text-left text-on-surface-variant font-normal p-sm"></th>
-          <th class="text-center text-on-surface-variant font-bold p-sm bg-surface-container-low rounded-t-xl">物理カウンター<br class="md:hidden">（カチカチ君など）</th>
-          <th class="text-center font-bold p-sm bg-surface-container border-x border-t border-neon-pink/50 rounded-t-xl text-neon-pink">GOGOカウンター</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="p-sm text-on-surface-variant border-b border-white/5">小役カウント</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container-low">○</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container border-x border-neon-pink/50 text-white font-bold">○（取消し100回分）</td>
-        </tr>
-        <tr>
-          <td class="p-sm text-on-surface-variant border-b border-white/5">確率計算</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container-low">手計算</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container border-x border-neon-pink/50 text-white font-bold">自動・リアルタイム</td>
-        </tr>
-        <tr>
-          <td class="p-sm text-on-surface-variant border-b border-white/5">設定推測</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container-low">経験と勘</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container border-x border-neon-pink/50 text-white font-bold">6色ゲージで見える化</td>
-        </tr>
-        <tr>
-          <td class="p-sm text-on-surface-variant border-b border-white/5">収支記録</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container-low">メモ帳・手帳</td>
-          <td class="p-sm text-center border-b border-white/5 bg-surface-container border-x border-neon-pink/50 text-white font-bold">カレンダー・グラフ</td>
-        </tr>
-        <tr>
-          <td class="p-sm text-on-surface-variant">持ち物</td>
-          <td class="p-sm text-center bg-surface-container-low rounded-b-xl">カウンター＋スマホ</td>
-          <td class="p-sm text-center bg-surface-container border-x border-b border-neon-pink/50 rounded-b-xl text-white font-bold">スマホだけ</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- 比較：2カード -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-4xl mx-auto items-stretch">
+    <!-- 物理カウンター -->
+    <div class="bg-surface-container-low border border-white/10 rounded-3xl p-md md:p-lg opacity-80">
+      <div class="flex items-center gap-sm mb-md min-h-[44px]">
+        <span class="material-symbols-outlined text-on-surface-variant text-3xl">pin</span>
+        <h3 class="font-bold text-lg text-on-surface-variant leading-tight">物理カウンター<span class="block text-xs font-normal text-on-surface-variant/70">（カチカチ君など）</span></h3>
+      </div>
+      <dl class="text-sm md:text-base">
+        <div class="flex justify-between items-center gap-sm border-b border-white/5 py-sm"><dt class="text-on-surface-variant/60 shrink-0">小役カウント</dt><dd class="text-on-surface-variant text-right">○</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/5 py-sm"><dt class="text-on-surface-variant/60 shrink-0">確率計算</dt><dd class="text-on-surface-variant text-right">手計算</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/5 py-sm"><dt class="text-on-surface-variant/60 shrink-0">設定推測</dt><dd class="text-on-surface-variant text-right">経験と勘</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/5 py-sm"><dt class="text-on-surface-variant/60 shrink-0">収支記録</dt><dd class="text-on-surface-variant text-right">メモ帳・手帳</dd></div>
+        <div class="flex justify-between items-center gap-sm py-sm"><dt class="text-on-surface-variant/60 shrink-0">持ち物</dt><dd class="text-on-surface-variant text-right">カウンター＋スマホ</dd></div>
+      </dl>
+    </div>
+    <!-- GOGOカウンター -->
+    <div class="relative bg-surface-container border-2 border-neon-pink rounded-3xl p-md md:p-lg shadow-[0_0_30px_rgba(255,29,206,0.25)]">
+      <span class="absolute -top-3 right-6 bg-neon-pink text-background text-xs font-bold px-sm py-[2px] rounded-full">これ1台でOK</span>
+      <div class="flex items-center gap-sm mb-md min-h-[44px]">
+        <img alt="GOGOカウンター ロゴ" src="images/logo_nobg.png" class="w-10 h-10 object-contain"/>
+        <h3 class="font-bold text-lg leading-tight"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></h3>
+      </div>
+      <dl class="text-sm md:text-base">
+        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">小役カウント</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>○＋取消し100回分</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">確率計算</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>自動・リアルタイム</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">設定推測</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>6色ゲージで見える化</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">収支記録</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>カレンダー・グラフ</dd></div>
+        <div class="flex justify-between items-center gap-sm py-sm"><dt class="text-on-surface-variant/60 shrink-0">持ち物</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-gold text-lg">smartphone</span>スマホだけ</dd></div>
+      </dl>
+    </div>
   </div>
 </section>
 
 <!-- ===== 選ばれる理由 ===== -->
 <section class="py-xl bg-surface-container-low">
-<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">GOGOカウンターが<br class="sm:hidden">選ばれる理由</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md text-center">
@@ -395,7 +388,7 @@
 </section>
 
 <!-- ===== 主な機能 ===== -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="features">
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="features">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">主な機能</h2>
 
   <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
@@ -467,7 +460,7 @@
 
 <!-- ===== ギャラリー ===== -->
 <section class="py-xl bg-surface-container-low" id="gallery">
-<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">ギャラリー</h2>
   <div class="flex overflow-x-auto gap-md pb-md snap-x hide-scrollbar">
     <div class="snap-center shrink-0 w-48 md:w-56">
@@ -499,7 +492,7 @@
 </section>
 
 <!-- ===== 利用シーン ===== -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="use-cases">
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="use-cases">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">こんな場面で使える</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
     <div class="bg-surface-container-low border border-neon-pink shadow-[0_0_15px_rgba(255,29,206,0.2)] rounded-2xl p-md relative overflow-hidden">
@@ -525,7 +518,7 @@
 
 <!-- ===== 誠実設計 ===== -->
 <section class="py-xl bg-surface-container-low" id="honest">
-<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-sm">盲信させないための、<span class="text-cyan neon-text-cyan">3つの設計</span></h2>
   <p class="text-center text-on-surface-variant max-w-2xl mx-auto mb-xl">設定判別ツールは「当たる」と言い切った時点で嘘になります。GOGOカウンターは、正直であることを設計方針にしています。</p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
@@ -549,10 +542,10 @@
 </section>
 
 <!-- ===== Google Playレビュー ===== -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto" id="reviews">
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="reviews">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">Google Playレビューより</h2>
   <p class="text-center text-on-surface-variant text-sm mb-xl">実際にGoogle Playへ投稿されたレビューの抜粋です（2026年7月）</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-4xl mx-auto">
     <div class="bg-surface-container border border-white/10 rounded-2xl p-md">
       <div class="flex text-gold mb-sm" style="font-variation-settings:'FILL' 1"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
       <p class="text-on-surface-variant mb-sm text-sm">「ホールで実際に使ってみて、片手でサクサク操作できる設計に驚きました。横画面がかなり使いやすい。ぶどうカウントのボタンが大きくて誤タップもほぼゼロ。設定の色分けもわかりやすく今まで使ってた無料アプリとは完成度が全然違います。」</p>
@@ -568,7 +561,7 @@
 </section>
 
 <!-- ===== 対応機種 ===== -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="compatibility">
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="compatibility">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">対応機種</h2>
   <p class="text-center text-gold font-bold text-xl mb-xl">ジャグラーシリーズ 全8機種対応</p>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-sm md:gap-md text-center text-sm md:text-base">
@@ -587,14 +580,14 @@
 
 <!-- ===== 料金 ===== -->
 <section class="py-xl bg-surface-container-low text-center" id="pricing">
-<div class="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
   <h2 class="font-head text-[28px] md:text-[32px] text-white mb-xs">料金</h2>
   <p class="text-on-surface-variant mb-xl">まずは無料でお試し。気に入ったら収支記録を解放しよう。</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-md text-left max-w-4xl mx-auto">
     <!-- FREE -->
     <div class="bg-surface-container border border-white/10 rounded-3xl p-lg flex flex-col">
       <p class="font-mono-num text-on-surface-variant mb-sm">FREE</p>
-      <p class="text-5xl font-anton text-primary mb-xs">¥0</p>
+      <p class="text-5xl font-sora text-primary mb-xs">¥0</p>
       <p class="text-on-surface-variant text-sm mb-md">基本機能は永久無料・広告なし</p>
       <ul class="text-on-surface-variant space-y-sm flex-1 mt-md mb-lg">
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 小役・ボーナスカウント</li>
@@ -610,7 +603,7 @@
     <!-- PREMIUM -->
     <div class="bg-surface-container border-2 border-gold rounded-3xl p-lg flex flex-col shadow-[0_0_30px_rgba(255,215,0,0.15)]">
       <p class="font-mono-num text-gold mb-sm">PREMIUM</p>
-      <p class="text-5xl font-anton text-gold mb-xs">¥980</p>
+      <p class="text-5xl font-sora text-gold mb-xs">¥980</p>
       <p class="text-on-surface-variant text-sm mb-md">買い切り・一度の購入で永久利用</p>
       <ul class="text-on-surface-variant space-y-sm flex-1 mt-md mb-md">
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-gold text-xl">check_circle</span> FREEの全機能</li>
@@ -740,10 +733,10 @@
 
 <!-- ===== フッター ===== -->
 <footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md max-w-6xl mx-auto">
   <div class="flex items-center gap-sm flex-1 font-head text-lg drop-shadow-[0_0_5px_rgba(255,29,206,0.3)]">
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
-    <div><span class="font-anton text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
+    <div><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
   </div>
   <div class="flex justify-center flex-1 gap-md text-xs">
     <a class="text-on-surface-variant hover:text-white transition-colors" href="terms.html">利用規約</a>
