@@ -262,9 +262,9 @@
     <span class="absolute bottom-[6%] right-[16%]">7</span>
   </div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+  <div class="relative z-10 max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center md:justify-center gap-lg md:gap-xl">
     <!-- 左：コピー＋ゲージデモ -->
-    <div>
+    <div class="w-full md:max-w-[560px]">
       <p class="text-cyan neon-text-cyan font-bold tracking-widest text-sm mb-sm">SETTING GAUGE｜このアプリ最大の武器</p>
       <h2 class="font-head text-[36px] leading-[1.25] md:text-[48px] md:leading-[1.2] text-white mb-md drop-shadow-[0_0_18px_rgba(255,29,206,0.35)]">
         設定が、<br>"<span class="text-neon-pink neon-text-pink">見える</span>"<span class="text-neon-pink neon-text-pink">。</span>
@@ -292,8 +292,8 @@
       </div>
     </div>
 
-    <!-- 右：実機スクショ（テキスト側に寄せる） -->
-    <div class="flex justify-center md:justify-start">
+    <!-- 右：実機スクショ -->
+    <div class="flex justify-center shrink-0">
       <div class="relative">
         <div aria-hidden="true" class="absolute -inset-6 rounded-[40px] blur-2xl opacity-60" style="background: radial-gradient(circle, rgba(255,29,206,0.35) 0%, rgba(0,229,255,0.15) 55%, transparent 75%);"></div>
         <img alt="設定分析画面：合算・ぶどう・REG確率と設定ゲージのリアルタイム表示" class="relative rounded-3xl border border-white/20 shadow-[0_0_40px_rgba(255,29,206,0.35)] max-h-[520px] w-auto" src="images/ss_analysis.jpg"/>
@@ -391,68 +391,68 @@
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="features">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xl">主な機能</h2>
 
-  <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row items-center md:justify-center gap-lg md:gap-xl mb-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-neon-pink text-sm mb-xs">01 / COUNT</p>
       <h3 class="font-head text-2xl text-neon-pink mb-sm">1タップ小役カウント</h3>
       <p class="text-on-surface-variant text-lg">ぶどう・単独BIG・チェリー重複BIG・単独REG・チェリー重複REGを1タップで記録。単独とチェリー重複を分けて数えられるから、設定推測の精度が上がります。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-start">
+    <div class="shrink-0 flex justify-center">
       <img alt="小役カウント画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,29,206,0.3)] max-h-[500px] object-cover" src="images/ss_counter.jpg"/>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row-reverse items-center gap-lg mb-xl">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row-reverse items-center md:justify-center gap-lg md:gap-xl mb-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-cyan text-sm mb-xs">02 / GAUGE</p>
       <h3 class="font-head text-2xl text-cyan mb-sm">設定ゲージ ─ 青から赤へ</h3>
       <p class="text-on-surface-variant text-lg">合算・単独REG・ぶどう確率をメーカー公表スペックの設定1〜6ボーダーとリアルタイム比較。設定1の青から設定6の赤へ変わる色とゲージで、「今の立ち位置」がひと目でわかります。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-end">
+    <div class="shrink-0 flex justify-center">
       <img alt="設定分析画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(0,229,255,0.3)] max-h-[500px] object-cover" src="images/ss_analysis.jpg"/>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row items-center md:justify-center gap-lg md:gap-xl mb-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-gold text-sm mb-xs">03 / MEDALS</p>
       <h3 class="font-head text-2xl text-gold mb-sm">差枚リアルタイム計算</h3>
       <p class="text-on-surface-variant text-lg">ボーナスをまたいだ自分の差枚を自動追跡。「今日プラスかマイナスか」を感覚ではなく数字で把握できます。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-start">
+    <div class="shrink-0 flex justify-center">
       <img alt="差枚計算画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_saishiku.jpg"/>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row-reverse items-center gap-lg mb-xl">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row-reverse items-center md:justify-center gap-lg md:gap-xl mb-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-neon-pink text-sm mb-xs">04 / RECORD <span class="text-gold border border-gold/50 rounded-full px-xs py-[1px] text-[10px] ml-xs align-middle">PREMIUM ¥980</span></p>
       <h3 class="font-head text-2xl text-neon-pink mb-sm">収支記録 ─ 勝ちパターンが見えてくる</h3>
       <p class="text-on-surface-variant text-lg">カレンダー・月次集計・機種/店舗別ランキング・推移グラフで収支を多角的に管理。数字が積み上がるほど、勝てる曜日・店・機種の傾向が見えてきます。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-end">
+    <div class="shrink-0 flex justify-center">
       <img alt="収支カレンダー画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,29,206,0.3)] max-h-[500px] object-cover" src="images/ss_calendar.jpg"/>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row items-center gap-lg mb-xl">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row items-center md:justify-center gap-lg md:gap-xl mb-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-cyan text-sm mb-xs">05 / RESUME</p>
       <h3 class="font-head text-2xl text-cyan mb-sm">セッション復帰</h3>
       <p class="text-on-surface-variant text-lg">休憩・移動・閉店持ち越しでも、履歴から「この台の続き」を即再開。カウントデータが消えない安心感があります。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-start">
+    <div class="shrink-0 flex justify-center">
       <img alt="セッション履歴画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(0,229,255,0.3)] max-h-[500px] object-cover" src="images/ss_shukei.jpg"/>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row-reverse items-center gap-lg">
-    <div class="flex-1">
+  <div class="flex flex-col md:flex-row-reverse items-center md:justify-center gap-lg md:gap-xl">
+    <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-gold text-sm mb-xs">06 / BACKUP</p>
       <h3 class="font-head text-2xl text-gold mb-sm">データ管理・引き継ぎ</h3>
       <p class="text-on-surface-variant text-lg">収支データはJSON形式でエクスポート／インポート可能。スマホを買い替えても、積み上げたデータごと引き継げます。</p>
     </div>
-    <div class="flex-1 w-full flex justify-center md:justify-end">
+    <div class="shrink-0 flex justify-center">
       <img alt="データ管理画面" class="rounded-3xl border border-white/20 shadow-[0_0_30px_rgba(255,215,0,0.3)] max-h-[500px] object-cover" src="images/ss_kanri.jpg"/>
     </div>
   </div>
