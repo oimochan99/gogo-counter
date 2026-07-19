@@ -116,6 +116,7 @@
     }
 
     .neon-bloom-primary { box-shadow: 0 0 20px rgba(255, 214, 10, 0.5); }
+    .neon-bloom-cyan { box-shadow: 0 0 20px rgba(0, 229, 255, 0.5); }
     .neon-text-pink { text-shadow: 0 0 14px rgba(255, 29, 206, 0.55); }
     .neon-text-cyan { text-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
 
@@ -172,7 +173,7 @@
     <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="images/logo_nobg.png"/></div>
     <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
   </a>
-  <nav class="hidden min-[1200px]:flex justify-center gap-md lg:gap-[32px] text-sm font-bold">
+  <nav class="hidden min-[1200px]:flex justify-center gap-sm min-[1400px]:gap-[32px] text-sm font-bold">
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#kachikachi">カチカチ君卒業</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#features">主な機能</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#gallery">ギャラリー</a>
@@ -182,9 +183,12 @@
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#pricing">料金</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#faq">FAQ</a>
   </nav>
-  <div class="hidden min-[1200px]:flex flex-1 justify-end gap-sm items-center">
-    <a href="#download" class="bg-primary-container text-background text-sm px-md py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all font-bold whitespace-nowrap">
-      無料ダウンロード
+  <div class="hidden min-[1200px]:flex flex-1 justify-end gap-xs items-center">
+    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background text-sm px-sm py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all font-bold whitespace-nowrap flex items-center gap-xs">
+      <span class="material-symbols-outlined text-lg">android</span>Google Play
+    </a>
+    <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-cyan text-background text-sm px-sm py-sm rounded-full neon-bloom-cyan hover:bg-[#5cf0ff] transition-all font-bold whitespace-nowrap flex items-center gap-xs">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store
     </a>
   </div>
   <button id="menuBtn" aria-label="メニュー" class="min-[1200px]:hidden text-primary p-xs flex-1 flex justify-end">
@@ -233,7 +237,7 @@
       <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold text-lg px-lg py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
         <span class="material-symbols-outlined">android</span>Google Playで無料ダウンロード
       </a>
-      <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-surface-container text-white font-bold text-lg px-lg py-md rounded-2xl border border-white/40 hover:border-white hover:bg-white/10 transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
+      <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-cyan text-background font-bold text-lg px-lg py-md rounded-2xl neon-bloom-cyan hover:bg-[#5cf0ff] transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
         <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Storeで無料ダウンロード
       </a>
     </div>
@@ -342,7 +346,7 @@
         <h3 class="font-bold text-lg leading-tight"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></h3>
       </div>
       <dl class="text-sm md:text-base">
-        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">小役カウント</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>○＋取消し100回分</dd></div>
+        <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">小役カウント</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>1タップ＋取消しOK</dd></div>
         <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">確率計算</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>自動・リアルタイム</dd></div>
         <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">設定推測</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>6色ゲージで見える化</dd></div>
         <div class="flex justify-between items-center gap-sm border-b border-white/10 py-sm"><dt class="text-on-surface-variant/60 shrink-0">収支記録</dt><dd class="text-white font-bold text-right flex items-center justify-end gap-xs"><span class="material-symbols-outlined text-cyan text-lg">check_circle</span>カレンダー・グラフ</dd></div>
@@ -589,7 +593,7 @@
         <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-surface-container-high text-primary font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs w-full">
           <span class="material-symbols-outlined text-xl">android</span>Google Playで無料DL
         </a>
-        <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-surface-container-high text-white font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs w-full">
+        <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-surface-container-high text-cyan font-bold px-lg py-sm rounded-full border border-white/20 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-xs w-full">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Storeで無料DL
         </a>
       </div>
@@ -687,7 +691,7 @@
       <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold text-lg px-xl py-md rounded-2xl neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-auto">
         <span class="material-symbols-outlined">android</span>Google Playで無料DL
       </a>
-      <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="flex items-center justify-center gap-xs bg-surface-container text-white font-bold text-lg px-xl py-md rounded-2xl border border-white/40 hover:border-white hover:bg-white/10 transition-all whitespace-nowrap w-full sm:w-auto">
+      <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="flex items-center justify-center gap-xs bg-cyan text-background font-bold text-lg px-xl py-md rounded-2xl neon-bloom-cyan hover:bg-[#5cf0ff] transition-all whitespace-nowrap w-full sm:w-auto">
         <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Storeで無料DL
       </a>
     </div>
