@@ -337,7 +337,34 @@
     renderResult(document.getElementById('sim-result'), r, machineName);
   }
 
+  /**
+   * 機種カード（ハブの一覧）に、アプリの機種選択ボタンと同じ色を当てる。
+   * 色は sim-tables.js（アプリからの自動生成物）が持っているので、
+   * HTML側に色を書かない＝アプリの色を変えても再生成だけで追従できる。
+   */
+  function paintMachineCards() {
+    var colors = window.SIM_MACHINE_COLORS || {};
+    var cards = document.querySelectorAll('[data-machine-card]');
+    Array.prototype.forEach.call(cards, function (el) {
+      var c = colors[el.getAttribute('data-machine-card')];
+      if (!c) return;
+      var g = c.gradient;
+      el.style.background = 'linear-gradient(135deg,' + g[0] + ' 0%,' + g[1] + ' 60%,' + g[2] + ' 100%)';
+      el.style.borderColor = c.border;
+      el.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,.14)';
+      // ホバー時だけ機種色で発光させる（常時光らせると一覧がうるさくなる）
+      el.addEventListener('mouseenter', function () {
+        el.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,.14), 0 0 18px ' + c.border;
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,.14)';
+      });
+    });
+  }
+
   function init() {
+    paintMachineCards();
+
     var mount = document.getElementById('gogo-sim');
     if (!mount) return;
     if (!window.GogoSim || !window.SIM_PROB_TABLES) {

@@ -111,6 +111,24 @@
     .spec-table th, .spec-table td { border: 1px solid rgba(255,255,255,.1); padding: 6px 8px; text-align: center; white-space: nowrap; }
     .spec-table th { background: #1c1b1f; color: #d0c6ab; font-weight: 700; }
     .spec-table td:first-child, .spec-table th:first-child { text-align: left; position: sticky; left: 0; background: #1c1b1f; z-index: 1; }
+
+    /* 機種カードは、アプリの機種選択ボタンと同じ色を当てる（色は sim-tables.js から） */
+    .mcard {
+        position:relative; overflow:hidden; display:flex; align-items:center;
+        justify-content:space-between; gap:12px;
+        padding:14px 14px 14px 16px; border-radius:14px;
+        border:1px solid rgba(255,255,255,.12);
+        background:#211f23;
+        transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .mcard::before {
+        content:""; position:absolute; inset:0; pointer-events:none;
+        background:radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 60%);
+    }
+    .mcard-name { position:relative; font-weight:700; color:#fff; line-height:1.4; }
+    .mcard-arrow { position:relative; color:rgba(255,255,255,.65); flex:0 0 auto; }
+    .mcard:hover { transform:translateY(-1px); }
+    @media (prefers-reduced-motion: reduce) { .mcard { transition:none; } .mcard:hover { transform:none; } }
 </style>
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden text-[16px] leading-relaxed">
@@ -195,22 +213,14 @@
     機種ごとの設定別スペック表と、その機種だけの判別のコツをまとめています。
   </p>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
-    <a href="/tool/my-juggler-5.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">マイジャグラーⅤ</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/gogo-juggler-3.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ゴーゴージャグラー3</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/neo-im-juggler-ex.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ネオアイムジャグラーEX</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/funky-juggler-2.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ファンキージャグラー2</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/happy-juggler-v3.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ハッピージャグラーV Ⅲ</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/ultra-miracle-juggler.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ウルトラミラクルジャグラー</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/juggler-girls-ss.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ジャグラーガールズSS</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
-    <a href="/tool/mister-juggler.html" class="bg-surface-container border border-white/10 rounded-xl px-sm py-sm hover:border-primary-container/50 transition-colors flex items-center justify-between gap-sm">
-      <span class="font-bold text-white">ミスタージャグラー</span><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>
+    <a href="/tool/my-juggler-5.html" class="mcard" data-machine-card="マイジャグラーⅤ"><span class="mcard-name">マイジャグラーⅤ</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/gogo-juggler-3.html" class="mcard" data-machine-card="ゴーゴージャグラー3"><span class="mcard-name">ゴーゴージャグラー3</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/neo-im-juggler-ex.html" class="mcard" data-machine-card="ネオアイムジャグラーEX"><span class="mcard-name">ネオアイムジャグラーEX</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/funky-juggler-2.html" class="mcard" data-machine-card="ファンキージャグラー2"><span class="mcard-name">ファンキージャグラー2</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/happy-juggler-v3.html" class="mcard" data-machine-card="ハッピージャグラーV Ⅲ"><span class="mcard-name">ハッピージャグラーV Ⅲ</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/ultra-miracle-juggler.html" class="mcard" data-machine-card="ウルトラミラクルジャグラー"><span class="mcard-name">ウルトラミラクルジャグラー</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/juggler-girls-ss.html" class="mcard" data-machine-card="ジャグラーガールズSS"><span class="mcard-name">ジャグラーガールズSS</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
+    <a href="/tool/mister-juggler.html" class="mcard" data-machine-card="ミスタージャグラー"><span class="mcard-name">ミスタージャグラー</span><span class="material-symbols-outlined mcard-arrow">chevron_right</span></a>
   </div>
   <p class="text-xs text-on-surface-variant/60 mt-sm">
     マイジャグラーⅥは、ぶどう・単独REGの解析値がまだ公開されていないため未対応です。公開され次第、アプリ・Web版とも対応します。

@@ -141,6 +141,16 @@
         text-wrap:balance;
     }
     @media (min-width:640px) { .mhero { padding:32px 30px 30px; } .mhero-reels span { width:44px; } }
+
+    /* ほかの機種へのリンク（色は sim-tables.js からJSが当てる） */
+    .mchip {
+        display:inline-block; padding:7px 13px; border-radius:10px;
+        font-size:13px; font-weight:700; color:#fff; white-space:nowrap;
+        border:1px solid rgba(255,255,255,.14); background:#211f23;
+        transition:transform .15s ease, box-shadow .2s ease;
+    }
+    .mchip:hover { transform:translateY(-1px); }
+    @media (prefers-reduced-motion: reduce) { .mchip { transition:none; } .mchip:hover { transform:none; } }
 </style>
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden text-[16px] leading-relaxed">
@@ -291,13 +301,13 @@
 <section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
   <h2 class="font-head text-[20px] text-white mb-sm">ほかの機種の設定判別</h2>
   <div class="flex flex-wrap gap-xs">
-<a href="/tool/my-juggler-5.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">マイジャグラーⅤ</a>
-<a href="/tool/gogo-juggler-3.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ゴーゴージャグラー3</a>
-<a href="/tool/funky-juggler-2.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ファンキージャグラー2</a>
-<a href="/tool/happy-juggler-v3.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ハッピージャグラーV Ⅲ</a>
-<a href="/tool/ultra-miracle-juggler.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ウルトラミラクルジャグラー</a>
-<a href="/tool/juggler-girls-ss.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ジャグラーガールズSS</a>
-<a href="/tool/mister-juggler.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ミスタージャグラー</a>
+<a href="/tool/my-juggler-5.html" class="mchip" data-machine-card="マイジャグラーⅤ">マイジャグラーⅤ</a>
+<a href="/tool/gogo-juggler-3.html" class="mchip" data-machine-card="ゴーゴージャグラー3">ゴーゴージャグラー3</a>
+<a href="/tool/funky-juggler-2.html" class="mchip" data-machine-card="ファンキージャグラー2">ファンキージャグラー2</a>
+<a href="/tool/happy-juggler-v3.html" class="mchip" data-machine-card="ハッピージャグラーV Ⅲ">ハッピージャグラーV Ⅲ</a>
+<a href="/tool/ultra-miracle-juggler.html" class="mchip" data-machine-card="ウルトラミラクルジャグラー">ウルトラミラクルジャグラー</a>
+<a href="/tool/juggler-girls-ss.html" class="mchip" data-machine-card="ジャグラーガールズSS">ジャグラーガールズSS</a>
+<a href="/tool/mister-juggler.html" class="mchip" data-machine-card="ミスタージャグラー">ミスタージャグラー</a>
   </div>
 </section>
 
