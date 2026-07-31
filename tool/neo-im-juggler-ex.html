@@ -103,6 +103,44 @@
     .spec-table th, .spec-table td { border:1px solid rgba(255,255,255,.1); padding:6px 8px; text-align:center; white-space:nowrap; }
     .spec-table th { background:#1c1b1f; color:#d0c6ab; font-weight:700; }
     .spec-table td:first-child, .spec-table th:first-child { text-align:left; position:sticky; left:0; background:#1c1b1f; z-index:1; font-weight:700; }
+
+    /* ===== 機種ヘッダー（画像は使わずCSSのみ。色はアプリの機種ボタンと共通） ===== */
+    .mhero {
+        position:relative; overflow:hidden; isolation:isolate;
+        border-radius:20px; border:1px solid color-mix(in srgb, var(--bd) 70%, transparent);
+        background:linear-gradient(160deg, var(--g1) 0%, var(--g2) 52%, var(--g3) 100%);
+        padding:26px 22px 24px;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 34px rgba(0,0,0,.55);
+    }
+    /* 中央からの光（スロットの筐体ランプのような当たり） */
+    .mhero-glow {
+        position:absolute; inset:-40% -10% auto -10%; height:180%;
+        background:radial-gradient(60% 55% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 70%);
+        pointer-events:none;
+    }
+    /* 背景に薄くリールの縦帯を3本 */
+    .mhero-reels {
+        position:absolute; inset:0; display:flex; gap:10px;
+        justify-content:flex-end; align-items:stretch;
+        padding:0 18px; opacity:.13; pointer-events:none;
+    }
+    .mhero-reels span {
+        width:34px; border-radius:6px;
+        background:linear-gradient(180deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,.55) 100%);
+    }
+    .mhero-eyebrow {
+        position:relative; z-index:1; margin:0 0 6px;
+        font-family:'Sora','Noto Sans JP',sans-serif; font-weight:800;
+        font-size:10px; letter-spacing:.28em; color:rgba(255,255,255,.62);
+    }
+    .mhero-name {
+        position:relative; z-index:1; margin:0;
+        font-family:'Noto Sans JP',sans-serif; font-weight:900;
+        font-size:clamp(21px, 5.6vw, 34px); line-height:1.25; color:#fff;
+        text-shadow:0 0 18px color-mix(in srgb, var(--bd) 85%, transparent), 0 2px 6px rgba(0,0,0,.6);
+        text-wrap:balance;
+    }
+    @media (min-width:640px) { .mhero { padding:32px 30px 30px; } .mhero-reels span { width:44px; } }
 </style>
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden text-[16px] leading-relaxed">
@@ -114,7 +152,7 @@
     <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
   </a>
   <nav class="hidden min-[1200px]:flex justify-center gap-sm min-[1400px]:gap-[32px] text-sm font-bold">
-    <a class="text-primary transition-colors whitespace-nowrap" href="/tool/">設定判別ツール</a>
+    <a class="text-[#4ade80] hover:text-[#86efac] transition-colors whitespace-nowrap" href="/tool/">設定判別ツール</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#kachikachi">カチカチ君卒業</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#features">主な機能</a>
     <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#gallery">ギャラリー</a>
@@ -139,7 +177,7 @@
 
 <div id="mobileNav" class="hidden fixed top-[64px] left-0 w-full bg-background/95 backdrop-blur-md border-b border-white/10 z-40 py-md px-6">
   <nav class="flex flex-col gap-sm font-bold text-base">
-    <a href="/tool/" class="text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">設定判別ツール</a>
+    <a href="/tool/" class="text-[#4ade80] hover:text-[#86efac] py-sm border-b border-white/5" onclick="closeMobileNav()">設定判別ツール</a>
     <a href="/#kachikachi" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">カチカチ君卒業</a>
     <a href="/#features" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">主な機能</a>
     <a href="/#gallery" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">ギャラリー</a>
@@ -160,7 +198,14 @@
     <span class="mx-xs">›</span><span class="text-on-surface-variant">ネオアイムジャグラーEX</span>
   </nav>
 
-  <h1 class="font-head text-[26px] md:text-[34px] leading-tight text-white mb-sm drop-shadow-[0_0_15px_rgba(255,29,206,0.35)]">
+  <div class="mhero" style="--g1:#3a0708;--g2:#b71c1c;--g3:#2e0606;--bd:#5a1f1f">
+    <div class="mhero-glow" aria-hidden="true"></div>
+    <div class="mhero-reels" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="mhero-eyebrow">SETTING JUDGE</p>
+    <p class="mhero-name">ネオアイムジャグラーEX</p>
+  </div>
+
+  <h1 class="font-head text-[22px] md:text-[28px] leading-tight text-white mt-md mb-sm">
     ネオアイムジャグラーEXの<span class="text-neon-pink neon-text-pink">設定判別</span>ツール
   </h1>
   <p class="text-on-surface-variant mb-md">ネオアイムジャグラーEXは、判別に使える数字の並び方がかなり独特な機種です。ぶどうは設定1〜5がすべて1/6.02で同値、設定6だけが1/5.78。反対にREGと単独REGは設定5と設定6が同じ値で、合算も1/129と1/128しか離れていません。つまり設定1〜5の切り分けと、設定6かどうかの判断とで、効く指標がきれいに入れ替わります。このページのツールは合算・単独REG・ぶどうの3指標だけを使い、入力した数字から設定1〜6それぞれの可能性を計算します。</p>

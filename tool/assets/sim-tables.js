@@ -15,6 +15,72 @@ window.SIM_MACHINE_SLUGS = {
   "ジャグラーガールズSS": "juggler-girls-ss",
   "ミスタージャグラー": "mister-juggler"
 };
+window.SIM_MACHINE_COLORS = {
+  "ゴーゴージャグラー3": {
+    "gradient": [
+      "#6b1934",
+      "#c2185b",
+      "#4a0e22"
+    ],
+    "border": "#7a5d6a"
+  },
+  "マイジャグラーⅤ": {
+    "gradient": [
+      "#4a0a18",
+      "#b51d30",
+      "#4a0a18"
+    ],
+    "border": "#5a2630"
+  },
+  "ネオアイムジャグラーEX": {
+    "gradient": [
+      "#3a0708",
+      "#b71c1c",
+      "#2e0606"
+    ],
+    "border": "#5a1f1f"
+  },
+  "ファンキージャグラー2": {
+    "gradient": [
+      "#0a1429",
+      "#1a237e",
+      "#0a1429"
+    ],
+    "border": "#36437a"
+  },
+  "ウルトラミラクルジャグラー": {
+    "gradient": [
+      "#2d0e3d",
+      "#6a1b9a",
+      "#2d0e3d"
+    ],
+    "border": "#4d3060"
+  },
+  "ハッピージャグラーV Ⅲ": {
+    "gradient": [
+      "#0d3019",
+      "#2e7d32",
+      "#0d3019"
+    ],
+    "border": "#1a3060"
+  },
+  "ジャグラーガールズSS": {
+    "gradient": [
+      "#0d3019",
+      "#1b5e20",
+      "#0d3019"
+    ],
+    "border": "#c62828"
+  },
+  "ミスタージャグラー": {
+    "gradient": [
+      "#1a1a1a",
+      "#0a0a0a",
+      "#1a1a1a"
+    ],
+    "border": "#fbc02d"
+  }
+};
 window.SIM_PROB_TABLES = {
   "マイジャグラーⅤ": {
     "gou": [
