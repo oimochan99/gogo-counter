@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ファンキージャグラー2設定判別｜チェリー以外の3指標すべてに設定差 – GOGOカウンター</title>
+<meta name="description" content="ファンキージャグラー2は合算・単独REG・ぶどうの3指標に同値が無く、隣り合う設定の段差は設定5と設定6の間が最大です。設定別の数値と判別の目安をまとめました。計算はブラウザ内で完結し、登録は不要です。">
+<link rel="canonical" href="https://gogo-counter.kuwastudio.com/tool/funky-juggler-2.html">
+<link rel="icon" href="/images/logo_nobg.png" type="image/png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "GOGOカウンター",
+      "item": "https://gogo-counter.kuwastudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "設定判別ツール",
+      "item": "https://gogo-counter.kuwastudio.com/tool/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ファンキージャグラー2の設定判別",
+      "item": "https://gogo-counter.kuwastudio.com/tool/funky-juggler-2.html"
+    }
+  ]
+}
+</script>
+<meta property="og:title" content="ファンキージャグラー2設定判別｜チェリー以外の3指標すべてに設定差 – GOGOカウンター">
+<meta property="og:description" content="ファンキージャグラー2は合算・単独REG・ぶどうの3指標に同値が無く、隣り合う設定の段差は設定5と設定6の間が最大です。設定別の数値と判別の目安をまとめました。計算はブラウザ内で完結し、登録は不要です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gogo-counter.kuwastudio.com/tool/funky-juggler-2.html">
+<meta property="og:image" content="https://gogo-counter.kuwastudio.com/images/logo_nobg.png">
+<meta property="og:site_name" content="GOGOカウンター">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ファンキージャグラー2設定判別｜チェリー以外の3指標すべてに設定差 – GOGOカウンター">
+<meta name="twitter:description" content="ファンキージャグラー2は合算・単独REG・ぶどうの3指標に同値が無く、隣り合う設定の段差は設定5と設定6の間が最大です。設定別の数値と判別の目安をまとめました。計算はブラウザ内で完結し、登録は不要です。">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "background": "#0a0a0a",
+                    "on-surface": "#e6e1e6",
+                    "on-surface-variant": "#d0c6ab",
+                    "surface": "#141316",
+                    "surface-container": "#211f23",
+                    "surface-container-low": "#1c1b1f",
+                    "surface-container-lowest": "#0f0e11",
+                    "surface-container-high": "#2b292d",
+                    "surface-container-highest": "#363438",
+                    "primary": "#fff5dc",
+                    "primary-container": "#ffd60a",
+                    "primary-fixed": "#ffe171",
+                    "neon-pink": "#ff1dce",
+                    "cyan": "#00e5ff",
+                    "gold": "#ffd700",
+                    "g1": "#3b82f6", "g2": "#22d3ee", "g3": "#a3e635",
+                    "g4": "#facc15", "g5": "#fb923c", "g6": "#ef4444"
+                },
+                spacing: {
+                    "xs": "4px", "sm": "12px", "md": "24px", "lg": "40px", "xl": "64px",
+                    "base": "8px", "gutter": "16px",
+                    "margin-desktop": "32px", "margin-mobile": "16px"
+                }
+            }
+        }
+    }
+</script>
+<style>
+    body { background-color:#0a0a0a; color:#e6e1e6; font-family:'Noto Sans JP',sans-serif; font-weight:400; }
+    .font-head { font-family:'Noto Sans JP',sans-serif; font-weight:900; letter-spacing:.01em; }
+    .font-sora { font-family:'Sora','Noto Sans JP',sans-serif; font-weight:800; letter-spacing:.01em; }
+    .font-mono-num { font-family:'JetBrains Mono',monospace; }
+    .material-symbols-outlined {
+        font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal;
+        font-size:24px; line-height:1; letter-spacing:normal; text-transform:none;
+        display:inline-block; white-space:nowrap; word-wrap:normal; direction:ltr;
+        font-feature-settings:'liga'; -webkit-font-smoothing:antialiased;
+    }
+    .neon-bloom-primary { box-shadow:0 0 20px rgba(255,214,10,.5); }
+    .neon-bloom-cyan { box-shadow:0 0 20px rgba(0,229,255,.5); }
+    .neon-text-pink { text-shadow:0 0 14px rgba(255,29,206,.55); }
+    .neon-text-cyan { text-shadow:0 0 10px rgba(0,229,255,.5); }
+    .gauge-track { background:linear-gradient(90deg,#3b82f6,#22d3ee,#a3e635,#facc15,#fb923c,#ef4444); border-radius:999px; }
+    .sim-input::-webkit-outer-spin-button, .sim-input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+    .sim-input { -moz-appearance:textfield; }
+    .prose-link { color:#ffd60a; text-decoration:underline; text-underline-offset:3px; }
+    .prose-link:hover { color:#ffe171; }
+    .spec-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .spec-table th, .spec-table td { border:1px solid rgba(255,255,255,.1); padding:6px 8px; text-align:center; white-space:nowrap; }
+    .spec-table th { background:#1c1b1f; color:#d0c6ab; font-weight:700; }
+    .spec-table td:first-child, .spec-table th:first-child { text-align:left; position:sticky; left:0; background:#1c1b1f; z-index:1; font-weight:700; }
+</style>
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden text-[16px] leading-relaxed">
+
+<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+<div class="flex justify-between items-center px-6 md:px-10 py-4 w-full">
+  <a href="/" class="flex items-center gap-sm flex-1">
+    <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="/images/logo_nobg.png"/></div>
+    <span class="font-head text-lg drop-shadow-[0_0_10px_rgba(255,29,206,0.5)] whitespace-nowrap"><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></span>
+  </a>
+  <nav class="hidden min-[1200px]:flex justify-center gap-sm min-[1400px]:gap-[32px] text-sm font-bold">
+    <a class="text-primary transition-colors whitespace-nowrap" href="/tool/">設定判別ツール</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#kachikachi">カチカチ君卒業</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#features">主な機能</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#gallery">ギャラリー</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#honest">誠実設計</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#compatibility">対応機種</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#pricing">料金</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="/#faq">FAQ</a>
+  </nav>
+  <div class="hidden min-[1200px]:flex flex-1 justify-end gap-xs items-center">
+    <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background text-sm px-md h-10 min-w-[148px] justify-center rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all font-bold whitespace-nowrap flex items-center gap-xs">
+      <span class="material-symbols-outlined text-lg">android</span>Google Play
+    </a>
+    <a href="https://apps.apple.com/jp/app/id6788582005" target="_blank" rel="noopener" class="bg-cyan text-background text-sm px-md h-10 min-w-[148px] justify-center rounded-full neon-bloom-cyan hover:bg-[#5cf0ff] transition-all font-bold whitespace-nowrap flex items-center gap-xs">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store
+    </a>
+  </div>
+  <button id="menuBtn" aria-label="メニュー" class="min-[1200px]:hidden text-primary p-xs flex-1 flex justify-end">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</div>
+</header>
+
+<div id="mobileNav" class="hidden fixed top-[64px] left-0 w-full bg-background/95 backdrop-blur-md border-b border-white/10 z-40 py-md px-6">
+  <nav class="flex flex-col gap-sm font-bold text-base">
+    <a href="/tool/" class="text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">設定判別ツール</a>
+    <a href="/#kachikachi" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">カチカチ君卒業</a>
+    <a href="/#features" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">主な機能</a>
+    <a href="/#gallery" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">ギャラリー</a>
+    <a href="/#honest" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">誠実設計</a>
+    <a href="/#compatibility" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">対応機種</a>
+    <a href="/#pricing" class="text-on-surface-variant hover:text-primary py-sm border-b border-white/5" onclick="closeMobileNav()">料金</a>
+    <a href="/#faq" class="text-on-surface-variant hover:text-primary py-sm" onclick="closeMobileNav()">FAQ</a>
+  </nav>
+</div>
+
+<main class="flex-grow pt-[64px]">
+
+<section class="px-margin-mobile md:px-margin-desktop pt-md pb-lg max-w-3xl mx-auto">
+  <nav aria-label="パンくず" class="text-xs text-on-surface-variant/60 mb-sm">
+    <a href="/" class="hover:text-white transition-colors">GOGOカウンター</a>
+    <span class="mx-xs">›</span>
+    <a href="/tool/" class="hover:text-white transition-colors">設定判別ツール</a>
+    <span class="mx-xs">›</span><span class="text-on-surface-variant">ファンキージャグラー2</span>
+  </nav>
+
+  <h1 class="font-head text-[26px] md:text-[34px] leading-tight text-white mb-sm drop-shadow-[0_0_15px_rgba(255,29,206,0.35)]">
+    ファンキージャグラー2の<span class="text-neon-pink neon-text-pink">設定判別</span>ツール
+  </h1>
+  <p class="text-on-surface-variant mb-md">ファンキージャグラー2の設定判別を、合算ボーナス確率・単独REG確率・ぶどう確率の3つから計算するツールです。この機種は3指標のどれにも設定1〜6の同値が無く、なかでも設定5と設定6のあいだの段差が、隣り合う設定のなかでいちばん大きく取られています。逆に設定1〜3は互いに近く、ここを1つに決めるのは簡単ではありません。チェリーは全設定1/35.6で完全に同値のため、判別には使っていません。</p>
+
+  <div class="flex flex-wrap gap-xs mb-md">
+    <span class="inline-flex items-center gap-xs bg-surface-container border border-gold/40 text-gold text-xs font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-base">paid</span>完全無料</span>
+    <span class="inline-flex items-center gap-xs bg-surface-container border border-cyan/40 text-cyan text-xs font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-base">person_off</span>登録不要</span>
+    <span class="inline-flex items-center gap-xs bg-surface-container border border-white/20 text-on-surface-variant text-xs font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-base">verified</span>アプリと同じ計算式</span>
+  </div>
+
+  <div id="gogo-sim" data-machine="ファンキージャグラー2"></div>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[24px] md:text-[28px] text-white mb-md">ファンキージャグラー2の設定判別で効くポイント</h2>
+  <div class="flex flex-col gap-sm">
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#a3e635">check_circle</span><div><p class="font-bold text-white mb-xs">段差がいちばん開くのは設定5と設定6の間</p><p class="text-sm text-on-surface-variant">合算は設定5が1/133で設定6が1/120、単独REGは1/404と1/352、ぶどうは1/5.76と1/5.67。この3指標はいずれも、隣り合う設定どうしの段差がここで最大になります。機械割も設定5が104.3%、設定6が109.0%で4.7ポイント離れますが、機械割は設定ごとの理論値であり、実際の収支を示すものではありません。判別のうえで意味があるのは、同じ段差が入力する3指標にも表れている点です。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#a3e635">check_circle</span><div><p class="font-bold text-white mb-xs">3指標のどこにも同値が無い</p><p class="text-sm text-on-surface-variant">合算1/166〜1/120、単独REG1/630〜1/352、ぶどう1/5.94〜1/5.67。このツールが使う3つの指標はいずれも設定1〜6に同じ値が無く、どれも設定が上がるほど理論値は軽くなります。同値による死角が無く、どの指標も回した分だけ計算に効いてくるのが特徴です。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#a3e635">check_circle</span><div><p class="font-bold text-white mb-xs">3指標のなかで単独REGの開きが最大</p><p class="text-sm text-on-surface-variant">単独REGは設定1が1/630、設定6が1/352。1と6の開きは約1.8倍で、合算の約1.4倍、ぶどうの約1.05倍と比べて最も大きい指標です。設定3の1/512から設定4の1/448にかけても段差があります。そのぶん、数え方の前提を外すと誤差もそのまま大きくなります。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#a3e635">check_circle</span><div><p class="font-bold text-white mb-xs">ぶどうは回すほど重みが増す</p><p class="text-sm text-on-surface-variant">ぶどうは設定1が1/5.94、設定6が1/5.67。隣接設定の差は0.02〜0.09と小さく短時間では動きませんが、出現頻度が高いぶん、数千ゲーム単位では判断材料としての重みが増していきます。設定5の1/5.76と設定6の1/5.67の差もわずかです。</p></div></div>
+  </div>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[24px] md:text-[28px] text-white mb-sm">ファンキージャグラー2の設定別スペック</h2>
+  <p class="text-sm text-on-surface-variant mb-md">
+    このツールが判定に使っている数値そのものです。ご自身で検算していただけます。
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-white/10">
+<table class="spec-table">
+<thead><tr><th>項目</th><th>設定1</th><th>設定2</th><th>設定3</th><th>設定4</th><th>設定5</th><th>設定6</th></tr></thead><tbody>
+<tr><td>合算</td><td>1/166</td><td>1/158</td><td>1/151</td><td>1/141</td><td>1/133</td><td>1/120</td></tr>
+<tr><td>BIG</td><td>1/266</td><td>1/259</td><td>1/256</td><td>1/249</td><td>1/240</td><td>1/220</td></tr>
+<tr><td>REG</td><td>1/440</td><td>1/407</td><td>1/366</td><td>1/323</td><td>1/299</td><td>1/262</td></tr>
+<tr><td>単独REG</td><td>1/630</td><td>1/585</td><td>1/512</td><td>1/448</td><td>1/404</td><td>1/352</td></tr>
+<tr><td>ぶどう</td><td>1/5.94</td><td>1/5.92</td><td>1/5.88</td><td>1/5.83</td><td>1/5.76</td><td>1/5.67</td></tr>
+<tr><td>チェリー</td><td>1/35.6</td><td>1/35.6</td><td>1/35.6</td><td>1/35.6</td><td>1/35.6</td><td>1/35.6</td></tr>
+<tr><td>機械割</td><td>97.0%</td><td>98.5%</td><td>99.8%</td><td>102.0%</td><td>104.3%</td><td>109.0%</td></tr>
+</tbody></table>
+  </div>
+  <p class="text-xs text-on-surface-variant/60 mt-sm">
+    出典：BIG・REG・合算・機械割は北電子公表値、ぶどう・単独REG・チェリーは各解析サイトの公開値（2026年6月29日時点）。
+    確率データ更新日：2026-07-31。チェリーは設定差が小さいため判別計算には使用していません。
+  </p>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[24px] md:text-[28px] text-white mb-md">実戦での使いかた</h2>
+  <div class="flex flex-col gap-sm">
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#facc15">lightbulb</span><div><p class="font-bold text-white mb-xs">単独REGの数え方を先に決める</p><p class="text-sm text-on-surface-variant">設定1の1/630と設定6の1/352という大きな差を活かすには、他の小役と同時に成立したREGを除いて数える必要があります。数え方が曖昧なまま入力すると、差の大きい指標がそのまま誤差になります。打ち始める前にカウント基準を決めておくと安定します。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#facc15">lightbulb</span><div><p class="font-bold text-white mb-xs">3000ゲームは目標ではなく目盛り</p><p class="text-sm text-on-surface-variant">ぶどうの隣接設定差は0.02〜0.09と小さく、短いゲーム数では動きません。ツールも3000ゲーム未満では観測継続を推奨と表示しますが、これは3000ゲームまで打ち続けることをすすめるものではありません。そこに満たない段階の表示は途中経過として見てください、という意味の目盛りです。やめる判断はゲーム数とは切り離して、自分の予算の範囲で決めてください。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#facc15">lightbulb</span><div><p class="font-bold text-white mb-xs">3指標が食い違うのは普通のこと</p><p class="text-sm text-on-surface-variant">合算だけが良く、ぶどうや単独REGが伴わないという食い違いは珍しくありません。3指標に同値が無いというのは「設定が上がれば理論値が必ず軽くなる」という意味であって、実測値が揃うことを保証するものではないためです。食い違ったときにどれか1つを選ぶ必要はなく、3つとも入力すればツール側が試行数に応じた重みで扱います。判断の拠りどころは、個々の指標の見た目ではなく最有力設定の確率のほうです。</p></div></div>
+  </div>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[24px] md:text-[28px] text-white mb-sm">ファンキージャグラー2で「わからない」こと</h2>
+  <p class="text-sm text-on-surface-variant mb-md">
+    このツールにできないことを先に書いておきます。
+  </p>
+  <div class="flex flex-col gap-sm">
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#fb923c">info</span><div><p class="font-bold text-white mb-xs">チェリーだけは全設定が同じ</p><p class="text-sm text-on-surface-variant">ファンキージャグラー2のチェリーは設定1から設定6まですべて1/35.6で、この機種の数値表のなかで唯一まったく設定差が無い項目です。どれだけ正確に数えても手掛かりにはならないため、本ツールは判別計算に一切使っていません。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#fb923c">info</span><div><p class="font-bold text-white mb-xs">設定1〜3は互いに近い</p><p class="text-sm text-on-surface-variant">合算は1/166・1/158・1/151、単独REGは1/630・1/585・1/512、ぶどうは1/5.94・1/5.92・1/5.88。低設定どうしは段差が小さく、ゲーム数を重ねても1つに決まらないことがあります。「低設定寄り」までは言えても、1か2かを断定できない場面が多いと考えてください。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#fb923c">info</span><div><p class="font-bold text-white mb-xs">BIG単体を入れる指標はありません</p><p class="text-sm text-on-surface-variant">BIGは設定1が1/266、設定6が1/220で、REGを合わせた合算では1/166と1/120になります。BIG側にも設定差はありますが、このツールはBIGとREGを合算ボーナスとしてまとめて扱い、BIG単体を指標にしていません。BIGだけが良い、あるいは伸びないという偏りは、合算・単独REG・ぶどうの3つの組み合わせのなかで評価されます。</p></div></div>
+<div class="bg-surface-container border border-white/10 rounded-xl p-sm flex gap-sm"><span class="material-symbols-outlined shrink-0 text-lg" style="color:#fb923c">info</span><div><p class="font-bold text-white mb-xs">500ゲームでは単独REGが1回出るかどうか</p><p class="text-sm text-on-surface-variant">500ゲーム時点で期待される単独REGの回数は、設定1で約0.8回、設定6でも約1.4回です。合算ボーナスも約3回と約4回で、この段階の数字はほとんど偶然に左右されます。ツールが総ゲーム数500未満で最有力設定を表示せず、3000未満では観測継続を推奨するのはこのためです。なお設定1〜6は等確率を前提に計算しており、ホールの設定配分は加味していません。</p></div></div>
+  </div>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[24px] md:text-[28px] text-white mb-md">よくある質問</h2>
+  <div class="space-y-sm">
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary gap-sm">設定5と設定6の段差が大きいなら、その2つだけ見ていればよいですか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary><p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">おすすめしません。ツールは設定1〜6すべての確率を同時に計算しており、5と6だけに注目すると、実際は設定3や設定4にいる可能性を見落とします。段差が大きいというのは、合算1/133と1/120、単独REG1/404と1/352、ぶどう1/5.76と1/5.67という理論値の並びの話で、実測値が短時間でどちらかに決まるという意味ではありません。この2つの切り分けにも、やはりゲーム数が要ります。</p></details>
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary gap-sm">単独REGを数えられなかった日は、判別をあきらめるしかないですか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary><p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">合算とぶどうだけでも計算できます。ファンキージャグラー2はこの2つにも設定1〜6の同値が無いため、単独REGが無くても材料がゼロになるわけではありません。ただし単独REGは設定1と設定6で約1.8倍と3指標のなかで最も設定差が大きく、入れられるときは確率の動き方がはっきりします。数えられなかった分は、絞り込みに時間がかかるとお考えください。</p></details>
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary gap-sm">設定1と設定2が見分けられないなら、判別する意味はありますか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary><p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">設定1と設定2は、合算が1/166と1/158、単独REGが1/630と1/585、ぶどうが1/5.94と1/5.92と、いずれも隣接設定のなかでは差が小さい組み合わせです。本ツールでも、この2つを分けられる材料はほとんどありません。判断材料になるのは、低設定域にいるのか、設定4以上に入っているのかという線引きのほうです。ファンキージャグラー2は合算1/166〜1/120、単独REG1/630〜1/352、ぶどう1/5.94〜1/5.67の3指標すべてに同値が無いため、この線引きに関しては回した分だけ確率が動きます。設定を1つに当てにいくのではなく、設定4以上の確率がどこまで上がるかを見る使い方が現実的です。</p></details>
+<details class="bg-surface-container border border-white/10 rounded-xl p-md group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary gap-sm">「まだ絞り込める段階ではない」と出たままです。入力が間違っていますか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary><p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">入力ミスとは限りません。ツールは最有力設定の確率が25%に届かないとき、絞り込める段階ではない旨を表示します。ファンキージャグラー2は設定1〜3の段差が小さいため、そのあたりを行き来している台では、ゲーム数を重ねても25%に届かないまま推移することがあります。設定は6種類あるので、何も分かっていない状態でも各設定は16.7%です。そこからわずかに動いただけの数字を結論として見せないための表示だとお考えください。</p></details>
+  </div>
+  <p class="text-sm text-on-surface-variant mt-md">
+    ツール全般の使い方や、何ゲーム回せば信用できるかは
+    <a href="/tool/" class="prose-link">設定判別ツールのトップページ</a>にまとめています。
+  </p>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[20px] text-white mb-sm">ほかの機種の設定判別</h2>
+  <div class="flex flex-wrap gap-xs">
+<a href="/tool/my-juggler-5.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">マイジャグラーⅤ</a>
+<a href="/tool/gogo-juggler-3.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ゴーゴージャグラー3</a>
+<a href="/tool/neo-im-juggler-ex.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ネオアイムジャグラーEX</a>
+<a href="/tool/happy-juggler-v3.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ハッピージャグラーV Ⅲ</a>
+<a href="/tool/ultra-miracle-juggler.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ウルトラミラクルジャグラー</a>
+<a href="/tool/juggler-girls-ss.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ジャグラーガールズSS</a>
+<a href="/tool/mister-juggler.html" class="bg-surface-container border border-white/10 rounded-lg px-sm py-xs text-sm hover:border-primary-container/50 transition-colors whitespace-nowrap">ミスタージャグラー</a>
+  </div>
+</section>
+
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-3xl mx-auto border-t border-white/10">
+  <h2 class="font-head text-[20px] text-white mb-sm">免責事項</h2>
+  <p class="text-sm text-on-surface-variant mb-md">
+    本ツールは、メーカー公表スペックおよび各解析サイトで公開されている数値をもとにした統計的な推定です。
+    設定を確定するものではなく、利益を保証するものでもありません。遊技は18歳以上・自己責任でお願いします。
+  </p>
+  <h2 class="font-head text-[20px] text-white mb-sm">運営者</h2>
+  <p class="text-sm text-on-surface-variant">
+    KUWA STUDIO（運営責任者：桒原 健人）<br>
+    スロット専用カウンターアプリ「GOGOカウンター」をApp Store・Google Playで公開しています。<br>
+    <a href="/contact.html" class="prose-link">お問い合わせ</a>
+  </p>
+</section>
+
+<section class="py-xl text-center relative overflow-hidden px-margin-mobile md:px-margin-desktop border-t border-white/10">
+  <div class="absolute inset-0 bg-gradient-to-t from-neon-pink/10 to-transparent pointer-events-none"></div>
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <h2 class="font-head text-[28px] md:text-[40px] leading-[1.3] text-white mb-md drop-shadow-[0_0_10px_rgba(255,29,206,0.5)]">数えるところから、<br>アプリに任せる。</h2>
+    <p class="text-cyan neon-text-cyan text-lg font-bold mb-md">カウントと設定判別は、アプリでも無料です。</p>
+    <div class="flex flex-col sm:flex-row gap-md items-center justify-center">
+      <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter&amp;referrer=utm_source%3Dsetting-tool%26utm_medium%3Dweb%26utm_campaign%3Dlp-simulator" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold text-lg px-xl py-md rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs whitespace-nowrap w-full sm:w-[320px]">
+        <span class="material-symbols-outlined">android</span>Google Playで無料DL
+      </a>
+      <a href="https://apps.apple.com/jp/app/id6788582005?ct=setting-tool" target="_blank" rel="noopener" class="flex items-center justify-center gap-xs bg-cyan text-background font-bold text-lg px-xl py-md rounded-full neon-bloom-cyan hover:bg-[#5cf0ff] transition-all whitespace-nowrap w-full sm:w-[320px]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Storeで無料DL
+      </a>
+    </div>
+    <p class="text-on-surface-variant/50 text-sm mt-md">※18歳以上対象・広告なし・収支記録のみ¥980買い切り</p>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mobileNav');
+  function closeMobileNav(){ nav.classList.add('hidden'); }
+  window.closeMobileNav = closeMobileNav;
+  if(btn && nav){
+    btn.addEventListener('click', function(){ nav.classList.toggle('hidden'); });
+    document.addEventListener('click', function(e){
+      if(!nav.contains(e.target) && !btn.contains(e.target)) closeMobileNav();
+    });
+  }
+})();
+</script>
+<script src="/tool/assets/sim-tables.js"></script>
+<script src="/tool/assets/sim-core.js"></script>
+<script src="/tool/assets/sim-ui.js"></script>
+
+<footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 gap-md w-full">
+  <div class="flex items-center gap-sm flex-1 font-head text-lg drop-shadow-[0_0_5px_rgba(255,29,206,0.3)]">
+    <div class="w-8 h-8 rounded-xl overflow-hidden"><img alt="GOGOカウンター ロゴ" class="w-full h-full object-contain" src="/images/logo_nobg.png"/></div>
+    <div><span class="font-sora text-neon-pink">GOGO</span><span class="text-white">カウンター</span></div>
+  </div>
+  <div class="flex justify-center flex-1 gap-md text-xs flex-wrap">
+    <a class="text-on-surface-variant hover:text-white transition-colors" href="/tool/">設定判別ツール</a>
+    <a class="text-on-surface-variant hover:text-white transition-colors" href="/terms.html">利用規約</a>
+    <a class="text-on-surface-variant hover:text-white transition-colors" href="/privacy.html">プライバシーポリシー</a>
+    <a class="text-on-surface-variant hover:text-white transition-colors" href="/contact.html">お問い合わせ</a>
+  </div>
+  <div class="flex-1 flex justify-end text-[10px] text-on-surface-variant/40">© 2026 KUWA STUDIO. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

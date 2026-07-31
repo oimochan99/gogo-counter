@@ -1,0 +1,1302 @@
+{
+  "generatedAt": "2026-07-31",
+  "note": "アプリ本体 calcSettingLikelihood の実出力。Web版JSはこれと一致しなければならない。",
+  "cases": [
+    {
+      "id": "machine-1-my-juggler-5",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          4.876737349101741,
+          7.687676552344175,
+          15.24014254373513,
+          26.1612572827627,
+          29.79567716118939,
+          16.238509110866868
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 29.79567716118939,
+        "expectedSetting": 4.170269876871944,
+        "badgeSetting": 5,
+        "statusLevel": 2,
+        "expectedPayout": 103.52281015581822,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.9246938775510206,
+        "posBig": 1.0,
+        "posReg": 0.8097237569060775,
+        "posRegSolo": 0.48781889674894635,
+        "posBudou": 0.07074999999999874,
+        "closestGou": 6,
+        "closestRegSolo": 4
+      }
+    },
+    {
+      "id": "machine-2-gogo-juggler-3",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          3.9508490489584305,
+          7.225662937907414,
+          12.018868217595852,
+          21.26379885154139,
+          26.538579049743795,
+          29.002241894253117
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 29.002241894253117,
+        "expectedSetting": 4.46220321597964,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 102.92103359308263,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.9749999999999999,
+        "posBig": 1.0,
+        "posReg": 0.8215126050420168,
+        "posRegSolo": 0.12679999999999986,
+        "posBudou": 1.0,
+        "closestGou": 6,
+        "closestRegSolo": 2
+      }
+    },
+    {
+      "id": "machine-3-neo-im-juggler-ex",
+      "input": {
+        "machineName": "ネオアイムジャグラーEX",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          3.382608831712043,
+          6.315601766365275,
+          14.228469408775481,
+          19.74898672698491,
+          26.585875574207602,
+          29.738457691954682
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 29.738457691954682,
+        "expectedSetting": 4.490552915214748,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 102.43125527368065,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.5718737128898909,
+        "posBudou": 0.5635499999999986,
+        "closestGou": 6,
+        "closestRegSolo": 4
+      }
+    },
+    {
+      "id": "machine-4-funky-juggler-2",
+      "input": {
+        "machineName": "ファンキージャグラー2",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          4.77513595032225,
+          8.764311670102657,
+          15.051815709360767,
+          24.331999240436343,
+          26.965348189710202,
+          20.11138924006777
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 26.965348189710202,
+        "expectedSetting": 4.202822797693129,
+        "badgeSetting": 5,
+        "statusLevel": 2,
+        "expectedPayout": 103.15135260359243,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 0.9421739130434781,
+        "posReg": 1.0,
+        "posRegSolo": 0.5286330935251797,
+        "posBudou": 0.20579999999999998,
+        "closestGou": 6,
+        "closestRegSolo": 4
+      }
+    },
+    {
+      "id": "machine-5-happy-juggler-v3",
+      "input": {
+        "machineName": "ハッピージャグラーV Ⅲ",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          3.1786299162091756,
+          6.371078792779423,
+          11.324507588985075,
+          20.986978303471187,
+          28.008543148973526,
+          30.13026224958161
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 30.13026224958161,
+        "expectedSetting": 4.5466651272496525,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 104.5363260002679,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.9706290037052282,
+        "posBudou": 0.6206879999999977,
+        "closestGou": 6,
+        "closestRegSolo": 6
+      }
+    },
+    {
+      "id": "machine-6-ultra-miracle-juggler",
+      "input": {
+        "machineName": "ウルトラミラクルジャグラー",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          4.593476804457049,
+          7.2988808109057395,
+          13.430213064463443,
+          20.296436400628846,
+          26.6340612543979,
+          27.746931665147034
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 27.746931665147034,
+        "expectedSetting": 4.4031951948504595,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 103.56891592006818,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 0.8556923076923075,
+        "posReg": 1.0,
+        "posRegSolo": 0.5992355025474752,
+        "posBudou": 0.39217499999999134,
+        "closestGou": 6,
+        "closestRegSolo": 4
+      }
+    },
+    {
+      "id": "machine-7-juggler-girls-ss",
+      "input": {
+        "machineName": "ジャグラーガールズSS",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          6.1159029084286045,
+          8.910609634274362,
+          14.573698015775141,
+          20.754365346980023,
+          24.832856133742997,
+          24.81256796079888
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 24.832856133742997,
+        "expectedSetting": 4.237153660457311,
+        "badgeSetting": null,
+        "statusLevel": 2,
+        "expectedPayout": 102.90492492710783,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.37628131172839513,
+        "posBudou": 0.6451866666666642,
+        "closestGou": 6,
+        "closestRegSolo": 3
+      }
+    },
+    {
+      "id": "machine-8-mister-juggler",
+      "input": {
+        "machineName": "ミスタージャグラー",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 18,
+        "regTotal": 16,
+        "budou": 680,
+        "regSolo": 9,
+        "regCherry": 2
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 34,
+        "regUnknown": 5
+      },
+      "expected": {
+        "probs": [
+          1.916113601956879,
+          4.053243943249062,
+          8.485186528848494,
+          18.42178864626268,
+          30.363900697350704,
+          36.75976658233218
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 36.75976658233218,
+        "expectedSetting": 4.815434186407979,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 104.69534713233224,
+        "probGou": 117.6470588235294,
+        "probBig": 222.22222222222223,
+        "probReg": 250.0,
+        "probRegSolo": 444.44444444444446,
+        "probBudou": 5.882352941176471,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 0.8586956521739133,
+        "posRegSolo": 0.5,
+        "posBudou": 1.0,
+        "closestGou": 6,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "status-499",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 499,
+        "bigTotal": 2,
+        "regTotal": 2,
+        "budou": 85,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 499,
+        "sessionSpins": 499,
+        "bonuses": 4,
+        "regUnknown": 2
+      },
+      "expected": {
+        "probs": [
+          15.601931965149692,
+          16.060781216578324,
+          16.760065886908432,
+          17.492568786186112,
+          17.587063331462247,
+          16.497588813715197
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 17.587063331462247,
+        "expectedSetting": 3.5489481674337853,
+        "badgeSetting": null,
+        "statusLevel": 0,
+        "expectedPayout": 102.16664598189698,
+        "probGou": 124.75,
+        "probBig": 249.5,
+        "probReg": 249.5,
+        "probRegSolo": null,
+        "probBudou": 5.870588235294117,
+        "posGou": 0.738415606723651,
+        "posBig": 0.49020768810347937,
+        "posReg": 0.8138819074613314,
+        "posRegSolo": 0.5,
+        "posBudou": 0.11815297261189178,
+        "closestGou": 5,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "status-500",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 500,
+        "bigTotal": 2,
+        "regTotal": 2,
+        "budou": 85,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 500,
+        "sessionSpins": 500,
+        "bonuses": 4,
+        "regUnknown": 2
+      },
+      "expected": {
+        "probs": [
+          15.680569801748021,
+          16.110467265179945,
+          16.774904173635978,
+          17.483175373467553,
+          17.55659361268193,
+          16.394289773286584
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 17.55659361268193,
+        "expectedSetting": 3.5430762505001523,
+        "badgeSetting": null,
+        "statusLevel": 1,
+        "expectedPayout": 102.15169026708851,
+        "probGou": 125.0,
+        "probBig": 250.0,
+        "probReg": 250.0,
+        "probRegSolo": null,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.7322448979591837,
+        "posBig": 0.4788181818181821,
+        "posReg": 0.8097237569060775,
+        "posRegSolo": 0.5,
+        "posBudou": 0.07074999999999874,
+        "closestGou": 5,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "status-2999",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 2999,
+        "bigTotal": 12,
+        "regTotal": 11,
+        "budou": 510,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 2999,
+        "sessionSpins": 2999,
+        "bonuses": 23,
+        "regUnknown": 11
+      },
+      "expected": {
+        "probs": [
+          13.237740536007589,
+          15.12178702293375,
+          18.09157416099363,
+          21.023191134236463,
+          20.29569067692782,
+          12.230016468900743
+        ],
+        "hasData": true,
+        "mostLikelySetting": 4,
+        "topProbability": 21.023191134236463,
+        "expectedSetting": 3.5670735379984535,
+        "badgeSetting": null,
+        "statusLevel": 1,
+        "expectedPayout": 102.09628297501257,
+        "probGou": 130.3913043478261,
+        "probBig": 249.91666666666666,
+        "probReg": 272.6363636363636,
+        "probRegSolo": null,
+        "probBudou": 5.8803921568627455,
+        "posGou": 0.6049295343345739,
+        "posBig": 0.4807132680590504,
+        "posReg": 0.637448210176873,
+        "posRegSolo": 0.5,
+        "posBudou": 0.07863732355229418,
+        "closestGou": 5,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "status-3000",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 3000,
+        "bigTotal": 12,
+        "regTotal": 11,
+        "budou": 510,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 3000,
+        "sessionSpins": 3000,
+        "bonuses": 23,
+        "regUnknown": 11
+      },
+      "expected": {
+        "probs": [
+          13.303598770708353,
+          15.167583738941333,
+          18.106416102067875,
+          21.01053813027004,
+          20.259213338376846,
+          12.152649919635564
+        ],
+        "hasData": true,
+        "mostLikelySetting": 4,
+        "topProbability": 21.01053813027004,
+        "expectedSetting": 3.5621213328557237,
+        "badgeSetting": null,
+        "statusLevel": 2,
+        "expectedPayout": 102.08381641302515,
+        "probGou": 130.43478260869566,
+        "probBig": 250.0,
+        "probReg": 272.72727272727275,
+        "probRegSolo": null,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.6039455782312922,
+        "posBig": 0.4788181818181821,
+        "posReg": 0.6368139963167588,
+        "posRegSolo": 0.5,
+        "posBudou": 0.07074999999999874,
+        "closestGou": 5,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "nodata-all-zero",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 1000,
+        "bigTotal": 0,
+        "regTotal": 0,
+        "budou": 0,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 1000,
+        "sessionSpins": 1000,
+        "bonuses": 0,
+        "regUnknown": 0
+      },
+      "expected": {
+        "probs": [
+          16.666666666666668,
+          16.666666666666668,
+          16.666666666666668,
+          16.666666666666668,
+          16.666666666666668,
+          16.666666666666668
+        ],
+        "hasData": false,
+        "mostLikelySetting": 1,
+        "topProbability": 16.666666666666668,
+        "expectedSetting": 3.5,
+        "badgeSetting": null,
+        "statusLevel": 1,
+        "expectedPayout": 102.06666666666668,
+        "probGou": null,
+        "probBig": null,
+        "probReg": null,
+        "probRegSolo": null,
+        "probBudou": null,
+        "posGou": 0.5,
+        "posBig": 0.5,
+        "posReg": 0.5,
+        "posRegSolo": 0.5,
+        "posBudou": 0.5,
+        "closestGou": null,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "only-gou",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 3000,
+        "bigTotal": 13,
+        "regTotal": 12,
+        "budou": 0,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 3000,
+        "sessionSpins": 3000,
+        "bonuses": 25,
+        "regUnknown": 12
+      },
+      "expected": {
+        "probs": [
+          11.50267857614287,
+          13.484501728012413,
+          15.500701249945761,
+          18.750539603238465,
+          20.327251958655946,
+          20.43432688400453
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 20.43432688400453,
+        "expectedSetting": 3.8421816529226573,
+        "badgeSetting": null,
+        "statusLevel": 2,
+        "expectedPayout": 101.74287521680513,
+        "probGou": 120.0,
+        "probBig": 230.76923076923077,
+        "probReg": 250.0,
+        "probRegSolo": null,
+        "probBudou": null,
+        "posGou": 0.8863636363636359,
+        "posBig": 1.0,
+        "posReg": 0.8215126050420168,
+        "posRegSolo": 0.5,
+        "posBudou": 0.5,
+        "closestGou": 6,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "only-budou",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 3000,
+        "bigTotal": 0,
+        "regTotal": 0,
+        "budou": 500,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 3000,
+        "sessionSpins": 3000,
+        "bonuses": 0,
+        "regUnknown": 0
+      },
+      "expected": {
+        "probs": [
+          12.046992473480165,
+          14.320650592500266,
+          16.42091802565235,
+          18.901543230316868,
+          19.67577490339927,
+          18.634120774651073
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 19.67577490339927,
+        "expectedSetting": 3.7574081982160803,
+        "badgeSetting": null,
+        "statusLevel": 2,
+        "expectedPayout": 101.56770898029019,
+        "probGou": null,
+        "probBig": null,
+        "probReg": null,
+        "probRegSolo": null,
+        "probBudou": 6.0,
+        "posGou": 0.5,
+        "posBig": 0.5,
+        "posReg": 0.5,
+        "posRegSolo": 0.5,
+        "posBudou": 0.7474747474747467,
+        "closestGou": null,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "only-regsolo",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 3000,
+        "bigTotal": 0,
+        "regTotal": 9,
+        "budou": 0,
+        "regSolo": 9,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 3000,
+        "sessionSpins": 3000,
+        "bonuses": 9,
+        "regUnknown": 0
+      },
+      "expected": {
+        "probs": [
+          35.271163459314536,
+          27.39876424378308,
+          20.54879871038495,
+          10.22515617761518,
+          4.7192880644597714,
+          1.836829344442502
+        ],
+        "hasData": true,
+        "mostLikelySetting": 1,
+        "topProbability": 35.271163459314536,
+        "expectedSetting": 2.2723312917745013,
+        "badgeSetting": 1,
+        "statusLevel": 2,
+        "expectedPayout": 98.85826622716888,
+        "probGou": 333.3333333333333,
+        "probBig": null,
+        "probReg": 333.3333333333333,
+        "probRegSolo": 333.3333333333333,
+        "probBudou": null,
+        "posGou": 0.0,
+        "posBig": 0.5,
+        "posReg": 0.12243697478991601,
+        "posRegSolo": 0.8507870967741937,
+        "posBudou": 0.5,
+        "closestGou": 1,
+        "closestRegSolo": 5
+      }
+    },
+    {
+      "id": "regweight-partial",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 5000,
+        "bigTotal": 20,
+        "regTotal": 20,
+        "budou": 830,
+        "regSolo": 6,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 5000,
+        "sessionSpins": 5000,
+        "bonuses": 40,
+        "regUnknown": 14
+      },
+      "expected": {
+        "probs": [
+          10.570958444205557,
+          15.52495804769598,
+          20.07228062870834,
+          22.126450611531727,
+          18.645407522419017,
+          13.059944745439372
+        ],
+        "hasData": true,
+        "mostLikelySetting": 4,
+        "topProbability": 22.126450611531727,
+        "expectedSetting": 3.619302249565808,
+        "badgeSetting": null,
+        "statusLevel": 2,
+        "expectedPayout": 101.21557533902146,
+        "probGou": 125.0,
+        "probBig": 250.0,
+        "probReg": 250.0,
+        "probRegSolo": 833.3333333333334,
+        "probBudou": 6.024096385542169,
+        "posGou": 0.7090909090909088,
+        "posBig": 0.3525,
+        "posReg": 0.8215126050420168,
+        "posRegSolo": 0.0,
+        "posBudou": 0.6727272727272708,
+        "closestGou": 5,
+        "closestRegSolo": 1
+      }
+    },
+    {
+      "id": "regweight-full",
+      "input": {
+        "machineName": "ゴーゴージャグラー3",
+        "startGames": 0,
+        "spins": 5000,
+        "bigTotal": 20,
+        "regTotal": 20,
+        "budou": 830,
+        "regSolo": 14,
+        "regCherry": 6
+      },
+      "derived": {
+        "currentGames": 5000,
+        "sessionSpins": 5000,
+        "bonuses": 40,
+        "regUnknown": 0
+      },
+      "expected": {
+        "probs": [
+          4.626437400225121,
+          8.722226281928995,
+          14.857669885448843,
+          25.78006996125376,
+          26.382796691151817,
+          19.630799779991463
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 26.382796691151817,
+        "expectedSetting": 4.194629616011525,
+        "badgeSetting": 5,
+        "statusLevel": 2,
+        "expectedPayout": 102.31534303974956,
+        "probGou": 125.0,
+        "probBig": 250.0,
+        "probReg": 250.0,
+        "probRegSolo": 357.14285714285717,
+        "probBudou": 6.024096385542169,
+        "posGou": 0.7090909090909088,
+        "posBig": 0.3525,
+        "posReg": 0.8215126050420168,
+        "posRegSolo": 0.657723870967742,
+        "posBudou": 0.6727272727272708,
+        "closestGou": 5,
+        "closestRegSolo": 4
+      }
+    },
+    {
+      "id": "midjoin-basic",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 3000,
+        "spins": 2000,
+        "bigTotal": 22,
+        "regTotal": 19,
+        "budou": 340,
+        "regSolo": 7,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 5000,
+        "sessionSpins": 2000,
+        "bonuses": 41,
+        "regUnknown": 12
+      },
+      "expected": {
+        "probs": [
+          3.5780366577889002,
+          5.579712950239626,
+          12.105414463316649,
+          24.504935555279648,
+          29.27732379759626,
+          24.954576575778912
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 29.27732379759626,
+        "expectedSetting": 4.451875266119915,
+        "badgeSetting": 5,
+        "statusLevel": 2,
+        "expectedPayout": 104.35252578174186,
+        "probGou": 121.95121951219512,
+        "probBig": 227.27272727272728,
+        "probReg": 263.1578947368421,
+        "probRegSolo": 285.7142857142857,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.8092244897959185,
+        "posBig": 1.0,
+        "posReg": 0.7059779005524864,
+        "posRegSolo": 1.0,
+        "posBudou": 0.07074999999999874,
+        "closestGou": 5,
+        "closestRegSolo": 6
+      }
+    },
+    {
+      "id": "midjoin-large",
+      "input": {
+        "machineName": "ネオアイムジャグラーEX",
+        "startGames": 6000,
+        "spins": 1500,
+        "bigTotal": 30,
+        "regTotal": 28,
+        "budou": 255,
+        "regSolo": 5,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 7500,
+        "sessionSpins": 1500,
+        "bonuses": 58,
+        "regUnknown": 23
+      },
+      "expected": {
+        "probs": [
+          3.350506574215167,
+          6.433503999291576,
+          14.582438107745368,
+          20.27087061107173,
+          27.256402316265728,
+          28.106278391410438
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 28.106278391410438,
+        "expectedSetting": 4.4596799327011265,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 102.36618869693513,
+        "probGou": 129.31034482758622,
+        "probBig": 250.0,
+        "probReg": 267.85714285714283,
+        "probRegSolo": 300.0,
+        "probBudou": 5.882352941176471,
+        "posGou": 0.9582308943089427,
+        "posBig": 1.0,
+        "posReg": 0.8858378378378381,
+        "posRegSolo": 1.0,
+        "posBudou": 0.5635499999999986,
+        "closestGou": 5,
+        "closestRegSolo": 5
+      }
+    },
+    {
+      "id": "missing-regsolo-table",
+      "input": {
+        "machineName": "ミスタージャグラー",
+        "startGames": 0,
+        "spins": 4000,
+        "bigTotal": 17,
+        "regTotal": 15,
+        "budou": 690,
+        "regSolo": 8,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 4000,
+        "sessionSpins": 4000,
+        "bonuses": 32,
+        "regUnknown": 7
+      },
+      "expected": {
+        "probs": [
+          1.7608163101212777,
+          4.038664058875419,
+          8.923006932552271,
+          18.324974392711347,
+          29.669944668522607,
+          37.28259363721708
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 37.28259363721708,
+        "expectedSetting": 4.819523479622898,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 104.69680681654255,
+        "probGou": 125.0,
+        "probBig": 235.2941176470588,
+        "probReg": 266.6666666666667,
+        "probRegSolo": 500.0,
+        "probBudou": 5.797101449275362,
+        "posGou": 0.7976216216216219,
+        "posBig": 1.0,
+        "posReg": 0.6976902173913044,
+        "posRegSolo": 0.5,
+        "posBudou": 1.0,
+        "closestGou": 5,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "invalid-budou-over-spins",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 100,
+        "bigTotal": 1,
+        "regTotal": 1,
+        "budou": 500,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 100,
+        "sessionSpins": 100,
+        "bonuses": 2,
+        "regUnknown": 1
+      },
+      "expected": {
+        "probs": [
+          13.415429560642917,
+          14.005101026127488,
+          15.297674784496202,
+          17.397928701457356,
+          18.773510176078663,
+          21.11035575119737
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 21.11035575119737,
+        "expectedSetting": 3.7744005615979344,
+        "badgeSetting": null,
+        "statusLevel": 0,
+        "expectedPayout": 102.76864890145919,
+        "probGou": 50.0,
+        "probBig": 100.0,
+        "probReg": 100.0,
+        "probRegSolo": null,
+        "probBudou": 0.2,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.5,
+        "posBudou": 1.0,
+        "closestGou": 6,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "invalid-bonus-over-games",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 10,
+        "bigTotal": 20,
+        "regTotal": 20,
+        "budou": 2,
+        "regSolo": 0,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 10,
+        "sessionSpins": 10,
+        "bonuses": 40,
+        "regUnknown": 20
+      },
+      "expected": {
+        "probs": [
+          16.56143674817404,
+          16.612107561755348,
+          16.66093806073652,
+          16.679931975540054,
+          16.6986081627548,
+          16.786977491039227
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 16.786977491039227,
+        "expectedSetting": 3.507030997160639,
+        "badgeSetting": null,
+        "statusLevel": 0,
+        "expectedPayout": 102.08429402035775,
+        "probGou": 0.25,
+        "probBig": 0.5,
+        "probReg": 0.5,
+        "probRegSolo": null,
+        "probBudou": 5.0,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.5,
+        "posBudou": 1.0,
+        "closestGou": 6,
+        "closestRegSolo": null
+      }
+    },
+    {
+      "id": "extreme-high",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 20000,
+        "bigTotal": 100,
+        "regTotal": 100,
+        "budou": 3600,
+        "regSolo": 60,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 20000,
+        "sessionSpins": 20000,
+        "bonuses": 200,
+        "regUnknown": 40
+      },
+      "expected": {
+        "probs": [
+          4.745403688591169e-13,
+          1.9474589203722861e-10,
+          0.0000018841266301097483,
+          0.00578787041754673,
+          0.24438444982710322,
+          99.7498257954335
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 99.7498257954335,
+        "expectedSetting": 5.997440341561766,
+        "badgeSetting": 6,
+        "statusLevel": 2,
+        "expectedPayout": 109.38959805909525,
+        "probGou": 100.0,
+        "probBig": 200.0,
+        "probReg": 200.0,
+        "probRegSolo": 333.3333333333333,
+        "probBudou": 5.555555555555555,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.981852046959663,
+        "posBudou": 1.0,
+        "closestGou": 6,
+        "closestRegSolo": 6
+      }
+    },
+    {
+      "id": "extreme-low",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 20000,
+        "bigTotal": 60,
+        "regTotal": 42,
+        "budou": 3200,
+        "regSolo": 28,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 20000,
+        "sessionSpins": 20000,
+        "bonuses": 102,
+        "regUnknown": 14
+      },
+      "expected": {
+        "probs": [
+          95.29981214316278,
+          4.680736642899737,
+          0.019429515481170063,
+          0.000021531843971099496,
+          1.6661232354994026e-7,
+          1.6902462845484758e-14
+        ],
+        "hasData": true,
+        "mostLikelySetting": 1,
+        "topProbability": 95.29981214316278,
+        "expectedSetting": 1.047196609358434,
+        "badgeSetting": 1,
+        "statusLevel": 2,
+        "expectedPayout": 97.04737208505374,
+        "probGou": 196.07843137254903,
+        "probBig": 333.3333333333333,
+        "probReg": 476.1904761904762,
+        "probRegSolo": 714.2857142857143,
+        "probBudou": 6.25,
+        "posGou": 0.0,
+        "posBig": 0.0,
+        "posReg": 0.0,
+        "posRegSolo": 0.0,
+        "posBudou": 0.0,
+        "closestGou": 1,
+        "closestRegSolo": 1
+      }
+    },
+    {
+      "id": "flat-budou-neoim",
+      "input": {
+        "machineName": "ネオアイムジャグラーEX",
+        "startGames": 0,
+        "spins": 6000,
+        "bigTotal": 24,
+        "regTotal": 24,
+        "budou": 1000,
+        "regSolo": 12,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 6000,
+        "sessionSpins": 6000,
+        "bonuses": 48,
+        "regUnknown": 12
+      },
+      "expected": {
+        "probs": [
+          4.70647366234304,
+          9.109131208811462,
+          19.655408915075505,
+          26.499788467253495,
+          27.918714545177316,
+          12.110483201339196
+        ],
+        "hasData": true,
+        "mostLikelySetting": 5,
+        "topProbability": 27.918714545177316,
+        "expectedSetting": 4.001465886281283,
+        "badgeSetting": 5,
+        "statusLevel": 2,
+        "expectedPayout": 101.45723795058241,
+        "probGou": 125.0,
+        "probBig": 250.0,
+        "probReg": 250.0,
+        "probRegSolo": 500.0,
+        "probBudou": 6.0,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.3563007891770012,
+        "posBudou": 0.08027777777777585,
+        "closestGou": 6,
+        "closestRegSolo": 3
+      }
+    },
+    {
+      "id": "gate-lowdata",
+      "input": {
+        "machineName": "マイジャグラーⅤ",
+        "startGames": 0,
+        "spins": 800,
+        "bigTotal": 4,
+        "regTotal": 4,
+        "budou": 140,
+        "regSolo": 2,
+        "regCherry": 0
+      },
+      "derived": {
+        "currentGames": 800,
+        "sessionSpins": 800,
+        "bonuses": 8,
+        "regUnknown": 2
+      },
+      "expected": {
+        "probs": [
+          9.489110865723346,
+          11.241385003821016,
+          14.651971170539374,
+          19.008430448108406,
+          21.48437779569604,
+          24.124724716111828
+        ],
+        "hasData": true,
+        "mostLikelySetting": 6,
+        "topProbability": 24.124724716111828,
+        "expectedSetting": 4.041317534525683,
+        "badgeSetting": null,
+        "statusLevel": 1,
+        "expectedPayout": 103.41447920181479,
+        "probGou": 100.0,
+        "probBig": 200.0,
+        "probReg": 200.0,
+        "probRegSolo": 400.0,
+        "probBudou": 5.714285714285714,
+        "posGou": 1.0,
+        "posBig": 1.0,
+        "posReg": 1.0,
+        "posRegSolo": 0.652496613485852,
+        "posBudou": 0.7664583333333314,
+        "closestGou": 6,
+        "closestRegSolo": 5
+      }
+    }
+  ]
+}

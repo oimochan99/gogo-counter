@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>整合チェック（開発用） – GOGOカウンター設定判別ツール</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/images/logo_nobg.png" type="image/png">
+<style>
+  body { background:#0a0a0a; color:#e6e1e6; font-family: system-ui, sans-serif; margin:0; padding:24px; line-height:1.7; }
+  h1 { font-size:20px; }
+  .sum { padding:12px 16px; border-radius:12px; font-weight:700; margin:16px 0; }
+  .ok { background:rgba(74,222,128,.12); color:#4ade80; border:1px solid rgba(74,222,128,.4); }
+  .ng { background:rgba(239,68,68,.12); color:#ef4444; border:1px solid rgba(239,68,68,.4); }
+  table { border-collapse:collapse; width:100%; font-size:13px; }
+  th, td { border-bottom:1px solid rgba(255,255,255,.1); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { color:#9aa0a8; font-weight:700; }
+  .pass { color:#4ade80; }
+  .fail { color:#ef4444; }
+  code { font-family: ui-monospace, monospace; font-size:12px; color:#ffd60a; }
+  p.note { color:#9aa0a8; font-size:13px; }
+</style>
+</head>
+<body>
+<h1>設定判別ツール 整合チェック</h1>
+<p class="note">
+  このページは開発用です。アプリ本体（Flutter）が書き出したゴールデンケースと、
+  このサイトの計算エンジン（<code>sim-core.js</code>）の出力が一致するかを検証します。<br>
+  ゴールデンの再生成： <code>cd juggler_counter &amp;&amp; flutter test test/export_sim_data_test.dart</code>
+</p>
+<div id="summary" class="sum">検証中…</div>
+<table id="rows"><thead><tr><th>ケース</th><th>結果</th><th>内容</th></tr></thead><tbody></tbody></table>
+
+<script src="assets/sim-tables.js"></script>
+<script src="assets/sim-core.js"></script>
+<script>
+(function () {
+  var TOL = 1e-9;
+  var NUM_KEYS = ['topProbability','expectedSetting','expectedPayout',
+    'probGou','probBig','probReg','probRegSolo','probBudou',
+    'posGou','posBig','posReg','posRegSolo','posBudou'];
+  var EXACT_KEYS = ['hasData','mostLikelySetting','badgeSetting','statusLevel','closestGou','closestRegSolo'];
+
+  fetch('assets/sim-golden.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (golden) {
+      var tbody = document.querySelector('#rows tbody');
+      var pass = 0;
+
+      golden.cases.forEach(function (c) {
+        var got = window.GogoSim.analyze(c.input);
+        var want = c.expected;
+        var errs = [];
+
+        ['currentGames','sessionSpins','bonuses','regUnknown'].forEach(function (k) {
+          if (got.derived[k] !== c.derived[k]) errs.push('derived.' + k + ': ' + got.derived[k] + ' / ' + c.derived[k]);
+        });
+        for (var i = 0; i < 6; i++) {
+          var d = Math.abs(got.probs[i] - want.probs[i]);
+          if (!(d <= TOL)) errs.push('probs[' + i + ']: ' + got.probs[i] + ' / ' + want.probs[i]);
+        }
+        NUM_KEYS.forEach(function (k) {
+          var a = got[k], w = want[k];
+          if (a === null || w === null) { if (a !== w) errs.push(k + ': ' + a + ' / ' + w); return; }
+          if (!(Math.abs(a - w) <= TOL)) errs.push(k + ': ' + a + ' / ' + w);
+        });
+        EXACT_KEYS.forEach(function (k) {
+          if (got[k] !== want[k]) errs.push(k + ': ' + got[k] + ' / ' + want[k]);
+        });
+        // 表示文字列（ユーザーがアプリと並べて見比べる箇所）
+        if (got.topProbability.toFixed(1) !== want.topProbability.toFixed(1)) {
+          errs.push('表示%: ' + got.topProbability.toFixed(1) + ' / ' + want.topProbability.toFixed(1));
+        }
+
+        if (!errs.length) pass++;
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td><code>' + c.id + '</code></td>' +
+          '<td class="' + (errs.length ? 'fail' : 'pass') + '">' + (errs.length ? 'FAIL' : 'PASS') + '</td>' +
+          '<td>' + (errs.length ? errs.join('<br>') : c.input.machineName + ' / ' + c.derived.currentGames + 'G') + '</td>';
+        tbody.appendChild(tr);
+      });
+
+      var el = document.getElementById('summary');
+      var all = golden.cases.length;
+      el.textContent = pass + ' / ' + all + ' 件一致（ゴールデン生成日 ' + golden.generatedAt + '）'
+        + (pass === all ? ' — アプリと完全に一致しています' : ' — 不一致あり。再生成が必要です');
+      el.className = 'sum ' + (pass === all ? 'ok' : 'ng');
+    })
+    .catch(function (e) {
+      var el = document.getElementById('summary');
+      el.textContent = 'ゴールデンの読み込みに失敗しました: ' + e;
+      el.className = 'sum ng';
+    });
+})();
+</script>
+</body>
+</html>
