@@ -43,46 +43,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GOGOカウンター | 設定が、&quot;見える&quot;。">
 <meta name="twitter:description" content="ジャグラー専用の設定判別・小役カウンター。全8機種対応・基本無料。">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    "background": "#0a0a0a",
-                    "on-surface": "#e6e1e6",
-                    "on-surface-variant": "#d0c6ab",
-                    "surface": "#141316",
-                    "surface-container": "#211f23",
-                    "surface-container-low": "#1c1b1f",
-                    "surface-container-lowest": "#0f0e11",
-                    "surface-container-high": "#2b292d",
-                    "surface-container-highest": "#363438",
-                    "primary": "#fff5dc",
-                    "primary-container": "#ffd60a",
-                    "primary-fixed": "#ffe171",
-                    "neon-pink": "#ff1dce",
-                    "cyan": "#00e5ff",
-                    "gold": "#ffd700",
-                    "g1": "#3b82f6",
-                    "g2": "#22d3ee",
-                    "g3": "#a3e635",
-                    "g4": "#facc15",
-                    "g5": "#fb923c",
-                    "g6": "#ef4444"
-                },
-                spacing: {
-                    "xs": "4px", "sm": "12px", "md": "24px", "lg": "40px", "xl": "64px",
-                    "base": "8px", "gutter": "16px",
-                    "margin-desktop": "32px", "margin-mobile": "16px"
-                }
-            }
-        }
-    }
-</script>
 <style>
     body {
         background-color: #0a0a0a;
@@ -164,6 +126,7 @@
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .btn-disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
 </style>
+<link rel="stylesheet" href="assets/tailwind.css">
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden text-[16px] leading-relaxed">
 
