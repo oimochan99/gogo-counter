@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GOGOカウンター | ジャグラー設定判別・小役カウンターアプリ【全8機種対応】</title>
-<meta name="description" content="ジャグラー専用の設定判別・小役カウンターアプリ。カチカチ君の代わりにスマホで小役カウント、合算・ぶどう・REG確率と設定ゲージをリアルタイム表示。全8機種対応・基本無料・広告なし。">
+<title>GOGOカウンター | ジャグラー設定判別・小役カウンターアプリ【全9機種対応】</title>
+<meta name="description" content="ジャグラー専用の設定判別・小役カウンターアプリ。カチカチ君の代わりにスマホで小役カウント、合算・ぶどう・REG確率と設定ゲージをリアルタイム表示。全9機種対応・基本無料・広告なし。">
 <link rel="canonical" href="https://gogo-counter.kuwastudio.com/">
 <link rel="icon" href="images/logo_nobg.png" type="image/png">
 <meta name="google-site-verification" content="t8omNm1JTQ_4rYZvV7Wvj5VZoiLu_E4VOdr5pDnm44k" />
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "GOGOカウンター",
-  "description": "ジャグラーシリーズ全8機種対応の設定判別・小役カウンターアプリ。ボーナス・ぶどうをワンタップで記録し、設定1〜6をリアルタイム推測。基本無料・収支記録は¥980買い切り。",
+  "description": "ジャグラーシリーズ全9機種対応の設定判別・小役カウンターアプリ。ボーナス・ぶどうをワンタップで記録し、設定1〜6をリアルタイム推測。基本無料・収支記録は¥980買い切り。",
   "applicationCategory": "GameApplication",
   "operatingSystem": "Android, iOS",
   "offers": [
@@ -34,7 +34,7 @@
 }
 </script>
 <meta property="og:title" content="GOGOカウンター | 設定が、&quot;見える&quot;。ジャグラー設定判別・小役カウンター">
-<meta property="og:description" content="親指1本でカウントするだけ。合算・ぶどう・REG確率と設定ゲージをリアルタイム表示。全8機種対応・基本無料・広告なし。">
+<meta property="og:description" content="親指1本でカウントするだけ。合算・ぶどう・REG確率と設定ゲージをリアルタイム表示。全9機種対応・基本無料・広告なし。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gogo-counter.kuwastudio.com/">
 <meta property="og:image" content="https://gogo-counter.kuwastudio.com/images/logo_nobg.png">
@@ -42,7 +42,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GOGOカウンター | 設定が、&quot;見える&quot;。">
-<meta name="twitter:description" content="ジャグラー専用の設定判別・小役カウンター。全8機種対応・基本無料。">
+<meta name="twitter:description" content="ジャグラー専用の設定判別・小役カウンター。全9機種対応・基本無料。">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
@@ -125,6 +125,10 @@
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .btn-disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+
+    /* 対応機種：マイジャグラーVIのカードは、スマホ（2列）では横幅いっぱい、PC（3列・768px以上）では1マス */
+    .machine-card-wide { grid-column: 1 / -1; }
+    @media (min-width: 768px) { .machine-card-wide { grid-column: auto; } }
 </style>
 <link rel="stylesheet" href="assets/tailwind.css">
 </head>
@@ -194,7 +198,7 @@
     <!-- バッジ3点 -->
     <div class="flex flex-wrap gap-sm justify-center">
       <span class="inline-flex items-center gap-xs bg-surface-container border border-gold/40 text-gold text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">paid</span>基本無料</span>
-      <span class="inline-flex items-center gap-xs bg-surface-container border border-cyan/40 text-cyan text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">casino</span>全8機種対応</span>
+      <span class="inline-flex items-center gap-xs bg-surface-container border border-cyan/40 text-cyan text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">casino</span>全9機種対応</span>
       <span class="inline-flex items-center gap-xs bg-surface-container border border-neon-pink/40 text-neon-pink text-sm font-bold px-sm py-xs rounded-full"><span class="material-symbols-outlined text-lg">swipe_up</span>片手操作OK</span>
     </div>
 
@@ -538,19 +542,19 @@
 <!-- ===== 対応機種 ===== -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto" id="compatibility">
   <h2 class="font-head text-[28px] md:text-[32px] text-white text-center mb-xs">対応機種</h2>
-  <p class="text-center text-gold font-bold text-xl mb-xl">ジャグラーシリーズ 全8機種対応</p>
+  <p class="text-center text-gold font-bold text-xl mb-xl">ジャグラーシリーズ 全9機種対応</p>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-sm md:gap-md text-center text-sm md:text-base">
+    <div class="machine-card-wide bg-gradient-to-b from-red-500 to-red-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">マイジャグラーVI</div>
     <div class="bg-gradient-to-b from-red-700 to-red-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">マイジャグラーV</div>
     <div class="bg-gradient-to-b from-pink-500 to-pink-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ゴーゴージャグラー3</div>
     <div class="bg-gradient-to-b from-blue-700 to-blue-950 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ファンキージャグラー2</div>
     <div class="bg-gradient-to-b from-indigo-500 to-indigo-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ネオアイムジャグラーEX</div>
-    <div class="bg-gradient-to-b from-green-600 to-green-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ハッピージャグラーVⅢ</div>
+    <div class="bg-gradient-to-b from-green-600 to-green-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ハッピージャグラーV Ⅲ</div>
     <div class="bg-gradient-to-b from-purple-600 to-purple-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ウルトラミラクルジャグラー</div>
     <div class="bg-gradient-to-b from-green-500 to-green-800 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center">ジャグラーガールズSS</div>
     <div class="bg-gradient-to-b from-stone-600 to-stone-900 border border-yellow-500/50 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] min-h-[76px] text-white font-bold flex items-center justify-center">ミスタージャグラー</div>
-    <div class="bg-gradient-to-b from-red-500 to-red-900 border border-white/20 rounded-xl py-sm px-xs shadow-[inset_0_2px_10px_rgba(255,255,255,0.15)] min-h-[76px] text-white font-bold flex items-center justify-center opacity-50">マイジャグラーⅥ<br>（近日対応）</div>
   </div>
-  <p class="text-center text-on-surface-variant/60 mt-md text-sm">※マイジャグラーⅥは近日対応予定です</p>
+  <p class="text-center text-on-surface-variant/60 mt-md text-sm">※マイジャグラーVIのぶどう・チェリー・単独REG、ミスタージャグラーの単独REGは、解析値が未公開のため「調査中」と表示します。マイジャグラーVIは合算確率で設定を推測します</p>
 </section>
 
 <!-- ===== 料金 ===== -->
@@ -569,7 +573,7 @@
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 設定ゲージ（リアルタイム設定推測）</li>
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 差枚リアルタイム計算</li>
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> セッション管理・復帰</li>
-        <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 全8機種対応・機種別スペック内蔵</li>
+        <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 全9機種対応・機種別スペック内蔵</li>
       </ul>
       <div class="flex flex-col gap-sm">
         <a href="https://play.google.com/store/apps/details?id=com.oimochan99.gogocounter" target="_blank" rel="noopener" class="bg-primary-container text-background font-bold px-lg py-sm rounded-full neon-bloom-primary hover:bg-primary-fixed transition-all flex items-center justify-center gap-xs w-full">
@@ -636,7 +640,7 @@
     </details>
     <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
       <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">どのジャグラー機種に対応していますか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
-      <p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">マイジャグラーV・ゴーゴージャグラー3・ファンキージャグラー2・ネオアイムジャグラーEX・ハッピージャグラーVⅢ・ウルトラミラクルジャグラー・ジャグラーガールズSS・ミスタージャグラーの全8機種です。マイジャグラーⅥは近日対応予定です。</p>
+      <p class="mt-md text-on-surface-variant border-t border-white/10 pt-md">マイジャグラーVI・マイジャグラーV・ゴーゴージャグラー3・ファンキージャグラー2・ネオアイムジャグラーEX・ハッピージャグラーV Ⅲ・ウルトラミラクルジャグラー・ジャグラーガールズSS・ミスタージャグラーの全9機種です。マイジャグラーVIは、ぶどう・チェリー・単独REGの解析値が公開されるまで「調査中」と表示し、合算確率で設定を推測します。</p>
     </details>
     <details class="bg-surface-container border border-white/10 rounded-xl p-md group">
       <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-primary">iPhoneでも使えますか？<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
@@ -656,7 +660,7 @@
     { "@type": "Question", "name": "インターネット接続は必要ですか？", "acceptedAnswer": { "@type": "Answer", "text": "不要です。全機能をオフラインで利用できます。" } },
     { "@type": "Question", "name": "データはどこに保存されますか？", "acceptedAnswer": { "@type": "Answer", "text": "端末内にのみ保存されます。アカウント登録は不要で、外部サーバーへの送信はありません。" } },
     { "@type": "Question", "name": "機種変更したらデータは消えますか？", "acceptedAnswer": { "@type": "Answer", "text": "プレミアム版ではJSON形式でエクスポート・インポートができ、機種変更後もデータを引き継げます。" } },
-    { "@type": "Question", "name": "どのジャグラー機種に対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "マイジャグラーV・ゴーゴージャグラー3・ファンキージャグラー2・ネオアイムジャグラーEX・ハッピージャグラーVⅢ・ウルトラミラクルジャグラー・ジャグラーガールズSS・ミスタージャグラーの全8機種。マイジャグラーⅥは近日対応予定です。" } },
+    { "@type": "Question", "name": "どのジャグラー機種に対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "マイジャグラーVI・マイジャグラーV・ゴーゴージャグラー3・ファンキージャグラー2・ネオアイムジャグラーEX・ハッピージャグラーV Ⅲ・ウルトラミラクルジャグラー・ジャグラーガールズSS・ミスタージャグラーの全9機種です。マイジャグラーVIは、ぶどう・チェリー・単独REGの解析値が公開されるまで「調査中」と表示し、合算確率で設定を推測します。" } },
     { "@type": "Question", "name": "iPhoneでも使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "使えます。iOS版（App Store）・Android版（Google Play）の両方を公開しています。iOS版はiPadのネイティブ表示にも対応しています。" } }
   ]
 }
