@@ -233,7 +233,7 @@
         設定が、<br>"<span class="text-neon-pink neon-text-pink">見える</span>"<span class="text-neon-pink neon-text-pink">。</span>
       </h2>
       <p class="text-on-surface-variant text-lg mb-md">
-        カウントするだけで、合算・ぶどう・REG確率をメーカー公表値と自動で照合。いま打っている台が<strong class="text-white">設定1〜6のどこにいるか</strong>を色とゲージで表示します。
+        カウントするだけで、合算・ぶどう・REG確率をメーカー公表値・解析値と自動で照合。いま打っている台が<strong class="text-white">設定1〜6のどこにいるか</strong>を色とゲージで表示します。
       </p>
 
       <!-- 設定ゲージデモ（アプリと同じ6色） -->
@@ -369,7 +369,7 @@
     <div class="w-full md:max-w-[520px]">
       <p class="font-mono-num text-cyan text-sm mb-xs">02 / GAUGE</p>
       <h3 class="font-head text-2xl text-cyan mb-sm">設定ゲージ ─ 青から赤へ</h3>
-      <p class="text-on-surface-variant text-lg">合算・単独REG・ぶどう確率をメーカー公表スペックの設定1〜6ボーダーとリアルタイム比較。設定1の青から設定6の赤へ変わる色とゲージで、「今の立ち位置」がひと目でわかります。</p>
+      <p class="text-on-surface-variant text-lg">合算・単独REG・ぶどう確率をメーカー公表値・解析値の設定1〜6ボーダーとリアルタイム比較。設定1の青から設定6の赤へ変わる色とゲージで、「今の立ち位置」がひと目でわかります。</p>
     </div>
     <div class="shrink-0 flex justify-center">
       <img alt="設定分析画面" class="max-h-[500px] drop-shadow-[0_0_30px_rgba(0,229,255,0.3)]" src="images/mock_analysis2.webp"/>
@@ -400,7 +400,7 @@
 
   <div class="flex flex-col md:flex-row items-center md:justify-center gap-lg md:gap-xl mb-xl">
     <div class="w-full md:max-w-[520px]">
-      <p class="font-mono-num text-cyan text-sm mb-xs">05 / RESUME</p>
+      <p class="font-mono-num text-cyan text-sm mb-xs">05 / RESUME <span class="text-gold border border-gold/50 rounded-full px-xs py-[1px] text-[10px] ml-xs align-middle">PREMIUM ¥980</span></p>
       <h3 class="font-head text-2xl text-cyan mb-sm">セッション復帰</h3>
       <p class="text-on-surface-variant text-lg">休憩・移動・閉店持ち越しでも、履歴から「この台の続き」を即再開。カウントデータが消えない安心感があります。</p>
     </div>
@@ -478,7 +478,7 @@
       <p class="text-neon-pink text-lg font-bold mb-sm text-center font-mono-num">SCENE 01</p>
       <img alt="着席してアプリを起動する場面" class="w-3/4 mx-auto aspect-square object-cover rounded-xl mb-sm block brightness-75" src="images/lp1.jpg"/>
       <h3 class="font-bold text-lg text-primary mt-md mb-sm text-center">台についた瞬間からスタート</h3>
-      <p class="text-on-surface-variant">機種を選んでカウントを開始するだけ。昨日打った台の続きも履歴からすぐ再開できます。</p>
+      <p class="text-on-surface-variant">機種を選んでカウントを開始するだけ。途中でアプリを閉じても、前回の続きから再開できます。</p>
     </div>
     <div class="bg-surface-container-low border border-cyan shadow-[0_0_15px_rgba(0,229,255,0.2)] rounded-2xl p-md relative overflow-hidden">
       <p class="text-cyan text-lg font-bold mb-sm text-center font-mono-num">SCENE 02</p>
@@ -572,7 +572,7 @@
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 小役・ボーナスカウント</li>
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 設定ゲージ（リアルタイム設定推測）</li>
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 差枚リアルタイム計算</li>
-        <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> セッション管理・復帰</li>
+        <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> セッション管理・前回の続きから再開</li>
         <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-cyan text-xl">check_circle</span> 全9機種対応・機種別スペック内蔵</li>
       </ul>
       <div class="flex flex-col gap-sm">
@@ -653,12 +653,12 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "無料でダウンロードできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。アプリ本体は無料で、小役・ボーナスカウント・設定ゲージ・差枚計算など基本機能をすべて使えます。広告もありません。" } },
-    { "@type": "Question", "name": "カチカチ君（物理の小役カウンター）と何が違いますか？", "acceptedAnswer": { "@type": "Answer", "text": "数えるところまでは同じですが、GOGOカウンターは数えた後の確率計算と設定推測まで自動で行います。機種別スペックとの照合・信頼度表示・収支記録までスマホ1台で完結します。" } },
-    { "@type": "Question", "name": "無料版とプレミアム版の違いは？", "acceptedAnswer": { "@type": "Answer", "text": "カウント系機能はすべて無料。アプリ内で¥980（買い切り）を購入すると収支記録（カレンダー・月次集計・グラフ・データ管理）が使えるようになります。" } },
-    { "@type": "Question", "name": "¥980は買い切りですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。一度購入すれば追加料金なく永久に利用できます。月額サブスクではありません。" } },
-    { "@type": "Question", "name": "インターネット接続は必要ですか？", "acceptedAnswer": { "@type": "Answer", "text": "不要です。全機能をオフラインで利用できます。" } },
-    { "@type": "Question", "name": "データはどこに保存されますか？", "acceptedAnswer": { "@type": "Answer", "text": "端末内にのみ保存されます。アカウント登録は不要で、外部サーバーへの送信はありません。" } },
+    { "@type": "Question", "name": "無料でダウンロードできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。アプリ本体は無料で、小役・ボーナスカウント・設定ゲージ・差枚計算など基本機能をすべてお使いいただけます。広告もありません。" } },
+    { "@type": "Question", "name": "カチカチ君（物理の小役カウンター）と何が違いますか？", "acceptedAnswer": { "@type": "Answer", "text": "数えるところまでは同じですが、GOGOカウンターは数えた後の確率計算と設定推測まで自動で行います。機種別スペックとの照合・信頼度表示・収支記録まで、スマホ1台で完結します。" } },
+    { "@type": "Question", "name": "無料版とプレミアム版の違いは？", "acceptedAnswer": { "@type": "Answer", "text": "カウント系（小役・ボーナス・差枚・設定ゲージ・セッション管理）はすべて無料です。アプリ内で¥980を購入すると、収支記録（カレンダー・月次集計・グラフ・データ管理）が使えるようになります。" } },
+    { "@type": "Question", "name": "¥980は買い切りですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。一度購入すれば追加料金なく永久にご利用いただけます。月額サブスクではありません。" } },
+    { "@type": "Question", "name": "インターネット接続は必要ですか？", "acceptedAnswer": { "@type": "Answer", "text": "不要です。カウントから収支記録まで全機能をオフラインで使えます。電波の悪いホールでも安心です。" } },
+    { "@type": "Question", "name": "データはどこに保存されますか？", "acceptedAnswer": { "@type": "Answer", "text": "お使いの端末内にのみ保存されます。アカウント登録は不要で、クラウドや外部サーバーへの送信は一切ありません。" } },
     { "@type": "Question", "name": "機種変更したらデータは消えますか？", "acceptedAnswer": { "@type": "Answer", "text": "プレミアム版ではJSON形式でエクスポート・インポートができ、機種変更後もデータを引き継げます。" } },
     { "@type": "Question", "name": "どのジャグラー機種に対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "マイジャグラーVI・マイジャグラーV・ゴーゴージャグラー3・ファンキージャグラー2・ネオアイムジャグラーEX・ハッピージャグラーV Ⅲ・ウルトラミラクルジャグラー・ジャグラーガールズSS・ミスタージャグラーの全9機種です。マイジャグラーVIは、ぶどう・チェリー・単独REGの解析値が公開されるまで「調査中」と表示し、合算確率で設定を推測します。" } },
     { "@type": "Question", "name": "iPhoneでも使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "使えます。iOS版（App Store）・Android版（Google Play）の両方を公開しています。iOS版はiPadのネイティブ表示にも対応しています。" } }
